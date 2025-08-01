@@ -1,0 +1,37 @@
+* {
+
+    text-decoration: none;
+}
+
+.Home_btn_heading {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+
+    text-decoration: none;
+
+}
+
+.Icon_in_menuBar {
+    font-size: 20px;
+
+}
+
+.div_menuuu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: black;
+
+}
+
+
+
+.Content_menuBar_divvv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 0;
+    padding: 20px;
+}

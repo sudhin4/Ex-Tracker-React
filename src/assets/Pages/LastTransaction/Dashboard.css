@@ -1,0 +1,41 @@
+
+@media only screen and (max-width:453px){
+    .filtericonsforfilteres{
+    width: 20px;
+    height: 20px;
+}
+.heading_for_lasttransaction__{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+}
+.filter_btnSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    width: 80px;
+    height: 30px;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 5px;
+    
+    
+}
+.name_Inbutton_filters{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.765);
+}
+.first_heading_filterdivv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    margin-top:30px;
+}
+}
+
+

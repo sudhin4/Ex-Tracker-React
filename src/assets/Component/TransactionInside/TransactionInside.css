@@ -1,0 +1,118 @@
+.Image_for_insideTransaction{
+    width: 80px;
+    height: 80px;
+}
+.price_for_indeptpage{
+    font-family: "Sans-serif";
+    font-weight: 600;
+    font-size: 30px;
+    color: green;
+    
+}
+.TransactionInside_divv{
+    display: flex;
+    flex-direction: column;
+    
+}
+.Image_price_tagsection{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.1px;
+}
+.transactionHeaidngss{
+    font-family: 'Sans-serif';
+    
+    font-size: 15px;
+}
+.transactioncontent{
+    font-family: "Sans-serif";
+    font-weight: 400;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+}
+.inside_div2323{
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+.transaction_name_content{
+    width: 105px;
+    line-height: 1;
+}
+.OtherInformationdivv{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.2;
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    margin: 5px;
+}
+.status__code{
+    color: green;
+}
+.btn_insideTransaction{
+    width: 90px;
+    height: 35px;
+    padding: 5px;
+    font-family: 'Sans-serif';
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.DeleteTransaction_btn{
+    color: white;
+    background-color: rgb(240, 66, 66);
+}
+.cancelTransaction_btn{
+    color: black;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.231);
+}
+.Image_price_tagsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.Buttons_cancel_delete{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.Notess{
+    font-family: 'Sans-serif';
+    
+    font-family: 19px;
+}
+.wentwrong_askquestion{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.1;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.STWWHeading{
+    font-family: 'Sans-serif';
+    font-weight: 400;
+    font-size: 15px;
+
+}
+.helpingLink{
+    font-family: 'Sans-serif';
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(66, 66, 239);
+    text-decoration: underline;
+    position: relative;
+    bottom: 10px;
+}

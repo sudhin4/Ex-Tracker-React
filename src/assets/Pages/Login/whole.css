@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@media only screen and (max-width:453px) {
+
+
+    .login_heading {
+        font-family: 'Inter';
+        font-weight: 800;
+        font-size: 28px;
+
+    }
+
+    .input_section {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+    }
+
+    .label_input {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .inputss {
+        width: 250px;
+        height: 30px;
+        font-family: 'Poppins';
+        font-size: 13px;
+        font-weight: 500;
+        outline: none;
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.317);
+        color: rgba(0, 0, 0, 0.735);
+    }
+
+    .btn {
+        width: 250px;
+        height: 40px;
+        padding: 5px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 15px;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .buttons_divv {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signup_btn {
+        color: black;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.174);
+    }
+
+    .whole_login_div {
+
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.329);
+        width: max-content;
+        padding: 20px;
+        border-radius: 10px;
+
+
+    }
+
+    .parent_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+
+    }
+
+    .Password_divv {
+        margin-top: 4px;
+    }
+
+    .Login_heading_div {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error_paragraph {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 10px;
+        color: red;
+    }
+
+    .error_section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome_heading_page {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 30px;
+        color: green;
+    }
+
+    .whole_div_welcome {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image_section_for_login {
+        width: 60px;
+        height: 60px;
+    }
+
+    .forgetPassword {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 13px;
+        color: blue;
+    }
+
+    .signupimagesection {
+        width: 60px;
+        height: 60px;
+    }
+
+    .useragreementdivvv {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .useragreementheading {
+        font-family: 'Inter';
+        font-weight: 600;
+        font-size: 12px;
+    }
+
+    .useragreementsection {
+        width: 13px;
+    }
+
+}

@@ -1,0 +1,123 @@
+.heading_last{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+}
+.WHole_Heading_Div{
+    display: flex;
+    gap: 65px;
+}
+.Image_for_TRANSACTION_NAME{
+    width: 30px;
+    height: 30px;
+}
+.DATAA{
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 17px;
+}
+.PAYMENT_modeimage_for_lasttransaction{
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.DaTE_lastTRANSACTION{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.123);
+}
+.TRANSAction_name{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+}
+.Data_forAMOUNTExpanse{
+    color: rgba(234, 62, 65, 1);
+    position: relative;
+}
+.Data_forDATE{
+    font-size: 15px;
+    position: relative;
+    
+}
+
+
+.EditBtn:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+@media only screen and (max-width:453px){
+    .Image_for_TRANSACTION_NAME{
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.205);
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .DaTE_lastTRANSACTION{
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        
+        border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+
+       
+    }
+    .Data_FOR_TRANSACTIONnAME{
+        color: rgba(0, 0, 0, 0.708);
+        width: 90px;
+        line-height: 15px;
+        font-size: 16px;
+        
+    }
+    .firstandsecondDivv{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .NameDiv_date_expanseincomeDivvv{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 5px;
+        
+        
+    }
+    .Data_forDATE{
+        color: rgba(0, 0, 0, 0.514);
+        font-size: 12px;
+        position: relative;
+        bottom: 10px;
+        
+        
+    }
+    .category_INLASTTransaction{
+        color: rgba(0, 0, 0, 0.422);
+        font-size: 14px;
+    }
+    .expanse_amount_divv1222{
+        line-height: 10px;
+        position: relative;
+        left: 110px;
+    }
+    .Data_forAMOUNTExpanse{
+        color: rgba(255, 0, 0, 0.568);
+    }
+    .delete_icons_lasttransaction{
+        color: rgba(255, 0, 0, 0.411);
+        font-size: 25px;
+        position: relative;
+        left: 80px;
+    }
+    
+    
+
+}

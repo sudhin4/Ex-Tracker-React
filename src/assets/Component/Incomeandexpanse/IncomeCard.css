@@ -1,0 +1,73 @@
+.Price_Income_heading{
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    
+}
+.Income_heading_section{
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    bottom: 10px;
+    
+    
+}
+.Price_Income_heading{
+    font-weight: 800;
+    color: green;
+}
+.Carddd_income{
+    width: 200px;
+    height: 70px;
+    border-radius: 5px;
+    display: flex;
+    border: 1.5px solid rgba(255, 255, 255, 0.422);
+    flex-direction: column;
+    line-height: 0px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+.Expanses_amount{
+    font-weight: 800;
+    color: rgb(235, 78, 78);
+}
+.Todayexpanse_heading{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    
+    position: relative;
+   
+}
+.calenderIMage_section{
+    width: 15px;
+    height: 15px;
+}
+.calender_imagediv{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    bottom: 25px;
+    transition: transform 0.5s;
+
+
+}
+.calender_imagediv:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+@media only screen and (max-width:453px){
+    .Carddd_income{
+        width: 120px;
+        height: 70px;
+        padding: 10px;
+    }
+    
+}

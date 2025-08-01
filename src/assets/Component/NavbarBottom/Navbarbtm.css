@@ -1,0 +1,48 @@
+ .imageIconss {
+     width: 30px;
+     height: 30px;
+     z-index: 111;
+     color: black;
+ }
+
+ .footernavbaricons {
+     font-size: 30px;
+     color: black;
+ }
+
+ .User {
+     font-size: 25px;
+ }
+
+ .TransactionIcons {
+     transform: rotate(90deg);
+ }
+
+ .navbarbtmSection______ {
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     justify-content: space-around;
+     width: 100%;
+     border: 1px solid rgba(0, 0, 0, 0.221);
+     padding-top: 15px;
+     padding-bottom: 15px;
+     border-radius: 0px;
+     
+     z-index: 11;
+
+ }
+
+ .Paragraph_bottom {
+     font-family: 'Poppins';
+     font-weight: 600;
+     font-size: 12px;
+     
+ }
+
+ .HOme_Divvv234 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     line-height: 0.4px;
+ }

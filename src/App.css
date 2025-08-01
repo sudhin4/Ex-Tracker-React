@@ -1,0 +1,23 @@
+:root{
+    --primarycolor :white;
+    --backgroundcolor:white;
+    --text-color:black;
+}
+
+
+body{
+    margin-bottom: 120px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: var(--backgroundcolor);
+    color: var(--text-color);
+}
+a{
+    color: var(--text-color);
+}
+.Paragraph_bottom{
+    color: var(--text-color);
+}
+.div_for_profilepagee{
+    color: var(--text-color);
+}

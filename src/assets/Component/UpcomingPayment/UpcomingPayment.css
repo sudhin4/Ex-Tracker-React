@@ -1,0 +1,122 @@
+.Logo_for_upcomingPayment {
+    width: 50px;
+    height: 50px;
+
+}
+
+.Title_of_thePayment {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.Price_of_theUPcomponent {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    color: red;
+}
+
+.date_of_up_component {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+.Heading_payment_Price {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+}
+
+.Card_ {
+
+    gap: 10px;
+
+    border-radius: 5px;
+    width: 250px;
+    padding: 10px;
+    margin-top: 15px;
+    border: 1.5px solid rgba(255, 255, 255, 0.537);
+
+}
+
+.Options_div_Upcom {
+    position: relative;
+    left: 70px;
+    bottom: 32px;
+}
+
+.options_upcominngpayment_logo {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn_add_upcoming {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+    width: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 119, 237);
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    transition: transform 0.2s;
+}
+
+.btn_add_upcoming:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.add_plus_icon_logo {
+    font-size: 15px;
+}
+
+.add_upcoming_btn_upcomingcomp {
+    position: relative;
+    left: 93%;
+    bottom: 140px;
+    cursor: pointer;
+
+}
+
+@media only screen and (max-width:453px) {
+    .Logo_for_upcomingPayment {
+        width: 30px;
+        height: 30px;
+    }
+
+    .Title_of_thePayment {
+        font-size: 15px;
+    }
+
+    .Card_ {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        border-radius: 10px;
+        position: relative;
+        right: 10px;
+        bottom: 20px;
+        box-shadow: rgba(106, 106, 110, 0.2) 0px 7px 15px 7px;
+    }
+
+    .FullUpcomingPayment {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+
+}

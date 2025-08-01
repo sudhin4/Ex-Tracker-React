@@ -1,0 +1,153 @@
+@media only screen and (max-width:453px) {
+    .Btn_for_add {
+        border: none;
+        border: 5px;
+        width: 80px;
+        height: 30px;
+        color: white;
+        background-color: rgba(0, 119, 237, 1);
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+
+    }
+
+    .Btn_for_add:hover {
+        transform: scale(1.03);
+    }
+
+    .btn_add_home {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 15px;
+    }
+
+    .Logo_for_add_btn {
+        font-size: 18px;
+    }
+
+    .upcomingHeading {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .UpcomingPaymentHeadingDivv {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 60px;
+        margin: 10px;
+        
+    }
+
+    .emptyupcomingbill {
+        width: 100px;
+        height: 100px;
+    }
+
+    .NoPaymentsechdul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 150px;
+    }
+
+    .Noupcomingpayment {
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 20px;
+
+    }
+
+   
+    .Imageinupcomingpayment{
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.292);
+        padding: 8px;
+        border-radius: 50px;
+    }
+    .Paymentheading{
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 15px;
+    }
+    .priceFor_upcomingPayment{
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 15px;
+        color: rgba(0, 128, 0, 0.642);
+
+    }
+    .dateinUpcomingpayment{
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 13px;
+        
+    }
+    .componentfull{
+        display: flex;
+        flex-direction: row;
+        line-height: 8px;
+        gap: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.039);
+        border-radius: 5px;
+        padding: 10px;
+        align-items: center;
+        margin-top: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        
+    }
+    .threebtn{
+        position: relative;
+        left: 115px;
+        bottom: 25px;
+        font-size: 20px;
+        
+    }
+    .btneditbtnup{
+        font-family: 'sans-serif';
+        font-weight: 400;
+        font-size: 18px;
+        
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+    }
+    .buttons{
+        border: 1px solid rgba(0, 0, 0, 0.126);
+        width: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: white;
+        border-radius:5px ;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: absolute;
+
+    }
+    .iconupcomingedit{
+        font-size: 23px;
+    }
+    .editbtn_divv{
+        position: relative;
+        z-index: 11;
+        bottom: 70px;
+        left: 190px;
+    }
+    .dlticon{
+        color: red;
+    }
+    .Delete_btn{
+        color: red;
+    }
+}

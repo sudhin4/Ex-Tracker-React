@@ -1,0 +1,75 @@
+
+@media only screen and (max-width:453px){
+   .usericons{
+    font-size: 70px;
+    
+}
+.username_section{
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 20px;
+}
+.Username_profile_image{
+    display: flex;
+    flex-direction: column;
+    line-height: 2px;
+    align-items: center;
+}
+.iconsforProfilepage{
+    font-size: 25px;
+    
+}
+.Para_profile{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 15px;
+   
+    
+}
+.div_for_profilepagee{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    /* border: 1px solid rgba(0, 0, 0, 0.121); */
+    padding: 5px;
+    border-radius: 10px;
+    padding-left: 10px;
+        
+}
+.Full_Profile_pagee{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.CopyRightsActIcons{
+    font-size: 20px;
+    
+}
+.CopyRightName{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 12px;
+}
+.CopyrightsDivv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    position: absolute;
+    left:80px;
+    bottom: 0;
+}
+.Right_arrow_btn{
+   
+    position: absolute;
+    right: 20px;
+}
+.Logoutfunction{
+    color: rgba(255, 0, 0, 0.676);
+}
+.Login_icons{
+    color: rgba(255, 0, 0, 0.676);
+} 
+}
+

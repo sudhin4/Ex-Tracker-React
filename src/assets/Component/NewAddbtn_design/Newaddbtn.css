@@ -1,0 +1,147 @@
+.Newadd_btn_design_whole_div{
+    border: 1px solid rgba(0, 0, 0, 0.201);
+    width: max-content;
+    padding: 30px 30px 30px 30px;
+    border-radius:10px ;position: relative;
+    
+}
+
+
+.image_tag_for_btn{
+    width: 40px;
+    height: 40px;
+}
+.label---{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+}
+.section_wise_add_button{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+   
+
+}
+.input_for_newadd{
+    width: 350px;
+    height: 30px;
+    font-family: "Roboto";
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+
+    border: 1px solid rgba(0, 0, 0, 0.221);
+}
+.income_btn_divvv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.217);
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+._clicked{
+    background-color: black;
+    color: white;
+}
+.category_choose_div___{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 15px;
+}
+.whole_input_tag_addbtn_component{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+}
+.buttons_for_save_addbtn{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    
+}
+.btn_addbtn{
+    width: 100px;
+    height: 30px;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    transition: transform 0.5s;
+}
+.btn_addbtn:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+
+}
+.cancel_btn__{
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+}
+.Add_btn__{
+    background-color: rgb(0, 119, 237);
+    color: white;
+    border: none;
+}
+.addYourMoneyDetails{
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 25px;
+    align-items: center;
+    
+}
+.heading_div_details{
+    display: flex;
+    justify-content: center;
+}
+.errorPara_for{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 13px;
+    color: red;
+}
+
+@media only screen and (max-width:453px){
+    .addYourMoneyDetails{
+        font-size: 20px;
+    }
+    .image_tag_for_btn{
+        width: 30px;
+        height: 30px;
+    }
+    .Income_heading,.Exapanse_heading{
+        font-size: 18px;
+    }
+    .income_btn_divvv{
+        gap: 10px;
+        width: 130px;
+        position: relative;
+        align-items: center;
+    }
+    .label---{
+        font-size: 16px;
+    }
+    .input_for_newadd{
+        width: 300px;
+    }
+    .Newadd_btn_design_whole_div{
+        width: 280px;
+    }
+}

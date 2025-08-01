@@ -1,0 +1,124 @@
+.FirstComponents_divv{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+.upcoming_payment_details_div{
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.upcomingPayment_heading___{
+   font-family: 'Roboto';
+   font-weight: 500;
+   font-size: 19px; 
+   position: relative;
+   right: 10px;
+   bottom: 10px;
+   
+
+}
+.LaasTTransaction_heading_INHOME{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    left: 10px;
+}
+
+
+
+.Data_for_last{
+    border: 1px solid rgba(0, 0, 0, 0.299);
+    padding: 10px;
+    border-radius: 10px;
+}
+.lastTransaction_calenderIMage{
+    width: 25px;
+    height: 25px;
+}
+.filter_heading{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.721);
+}
+.filters_div_section{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    height: 40px;
+    width: 130px;
+    background-color: white;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.first_heading_filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 70%;
+}
+
+@media only screen and (max-width:453px){
+    .FirstComponents_divv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .income_expanse_dvv{
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 50px;
+        z-index: 111;
+    }
+    .Navbarbtom232m{
+        bottom: 0;
+        width: 100%;
+        z-index: 10000;
+        right: 1px;
+        position: fixed;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 125px; 
+    }
+    .DaTa_component_div{
+        position: relative;
+        bottom: 15px;
+    }
+    .upcoming_payment_details_div{
+        position: relative;
+        bottom: 50px;
+    }
+    .LAstTransaction_home_Divvv{
+        position: relative;
+        bottom: 50px;
+    }
+    .NotransactionHave{
+        width: 100px;
+        height: 100px;
+    }
+    .Notransaction_heading{
+        font-family: 'Inter';
+        font-weight: 500;
+        font-size: 20px;
+    }
+    .DaTa_component_div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 50px;
+    }
+    
+}
+

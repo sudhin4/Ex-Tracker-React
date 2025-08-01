@@ -1,0 +1,112 @@
+.Image_in_typelist {
+    width: 30px;
+    height: 30px;
+}
+
+.Type_name {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.whole_type_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 390px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    transition: transform 0.5s;
+}
+
+.whole_type_list:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+
+}
+
+.chooseType {
+    font-family: "Roboto";
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.584);
+    font-size: 18px;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.choose_typelist_div {
+    width: 355px;
+    padding-left: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown_icon {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.792);
+    transition: transform 0.4s ease;
+}
+
+.dropdown_icon.click {
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.typelistcontent_component {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+
+}
+
+.fullcontent_component_list {
+    width: 360px;
+    border: 1px solid rgba(0, 0, 0, 0.221);
+    border-radius: 5px;
+    height: 300px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    position: absolute;
+    z-index: 11;
+    background-color: white;
+}
+
+.fullcontent_component_list::-webkit-scrollbar {
+    display: none;
+}
+
+.image_for_chooseinput {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-width:453px){
+    .choose_typelist_div{
+        width: 310px;
+        height: 50px;
+    }
+    .Image_in_typelist{
+        width: 30px;
+    }
+    .Type_name{
+        font-size: 15px;
+    }
+    .fullcontent_component_list{
+        width: 320px;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 10px;
+    }
+    .btn_addbtn{
+        height: 40px;
+    }
+}

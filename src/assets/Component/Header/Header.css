@@ -1,0 +1,27 @@
+.NAmeSite{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 24px;
+}
+.Icon_logo_bellIcon{
+    font-size: 29px;
+}
+.WHole_header_div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 95%;
+    position: relative;
+    left: 20px;
+    margin: 5px;    
+    
+}
+@media only screen and (max-width:452px){
+    .WHole_header_div{
+        gap: 45%;
+        
+    }
+    .NAmeSite{
+        font-size: 24px;
+    }
+}

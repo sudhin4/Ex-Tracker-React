@@ -1,0 +1,13 @@
+.Barchart_divv{
+    width: 50%;
+    height: 500px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+    
+}

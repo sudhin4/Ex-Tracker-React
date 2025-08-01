@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.Todayheading{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 19px;
+}
+.Balanace_amount_div{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    position: relative;
+    left: 20px;
+    
+}
+.Amount__{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 23px;
+    
+}
+.Balance_para{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.772);
+}
+.CardDiv{
+    width: 400px;
+    height: max-content;
+    /* background-color: rgb(95, 37, 159); */
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.553);
+}
+.Three_dot_btn_andToday{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    left: 20px;
+    gap: 67%;
+    
+}
+.Logo_three_btn{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.79);
+}
+.bottom_content_divvv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 190px;
+}
+.wifi_logo_card{
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.74);
+    transform: rotate(90deg);
+    position: relative;
+    right: 18px;
+    
+}
+
+.Accout_name_User_name{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.758);
+}
+.AccountName_userName_div{
+    position: relative;
+    left: 20px;
+}
+@media only screen and (max-width:453px){
+    .CardDiv{
+        width: 90%;
+        height: 160px;
+        
+    }
+    .Maincard_full_component{
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+
+    
+}
