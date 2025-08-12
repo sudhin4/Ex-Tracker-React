@@ -5,3 +5,4 @@ export const Datacontext = createContext();
 
 export const incomeorexpansecontext = createContext();
 export const Maincontextdata = createContext();
+export const Islogin = createContext();

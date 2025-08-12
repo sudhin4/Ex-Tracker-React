@@ -1,8 +1,13 @@
 import Loginimage from "../Login/face-recognition.png";
 import authentication from '../Login/authenticity.png'
 import '../Login/whole.css'
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
+
+  const navigate = useNavigate();
+
+
   return (
     <>
       <div className="parent_div">
@@ -46,7 +51,7 @@ function LoginPage() {
             <button className="login_btn btn" >
               Login
             </button>
-            <button className="signup_btn btn" >
+            <button className="signup_btn btn" onClick={()=>navigate('/Signuppage')} >
               Signup?
             </button>
           </div>

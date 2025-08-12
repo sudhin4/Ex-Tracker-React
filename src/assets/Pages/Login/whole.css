@@ -153,4 +153,40 @@
         width: 13px;
     }
 
+    .successTickIcon{
+        font-size: 60px;
+        color:green;
+    }
+    .successfullYLoginHeading{
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 22px;
+        color: rgba(0, 0, 0, 0.703);
+    }
+    .successfullyLoginPagediv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 0, 0, 0.169);
+        width: max-content;
+        border-radius: 10px;
+        padding: 15px;
+        background-color: white;
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        
+    }
+    .successfullYlogin_componenttt{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.436);
+    z-index: 10;
+    }
+
 }

@@ -1,6 +1,5 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
 import App from './App.jsx'
 import Home from './assets/Pages/Home/Home.jsx'
 import Charts from './assets/Component/DashboardCharts/Charts.jsx'
@@ -23,6 +22,8 @@ import PrivacyPolicy from './assets/Pages/Profile/InsideProfile/Privacypolicy.js
 import ContactPage from './assets/Pages/Profile/InsideProfile/Contact/ContactPage.jsx'
 
 import TransactionInside from './assets/Component/TransactionInside/TransactionInside.jsx'
+import LoginDirectComponent from './assets/Pages/LoginDirectPage/LoginDirectComponent.jsx'
+import SuccessfullyLoginPage from './assets/Pages/Login/successfullylogin.jsx'
 
 
 createRoot(document.getElementById('root')).render(

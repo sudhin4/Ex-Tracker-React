@@ -83,8 +83,8 @@ function Login({getnamefun}) {
             <button className="login_btn btn" onClick={() => getvaluefrominp()}>
               Login
             </button>
-            <button className="signup_btn btn" onClick={() => navigate("/")}>
-              Signup?
+            <button className="signup_btn btn" onClick={() => navigate("/Signuppage")}>
+              Signup
             </button>
           </div>
         </div>
