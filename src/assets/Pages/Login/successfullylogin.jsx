@@ -7,7 +7,7 @@ function SuccessfullyLoginPage(){
         <>
         <div className="successfullyLoginPagediv">
             <TiTick className="successTickIcon"/>
-            <h2 className="successfullYLoginHeading">Successfully Signup</h2>
+            <h2 className="successfullYLoginHeading">Success</h2>
         </div>
         </>
     )
