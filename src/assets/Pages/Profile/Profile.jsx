@@ -11,18 +11,36 @@ import { Link, useNavigate } from "react-router-dom";
 import LoginDirectComponent from "../LoginDirectPage/LoginDirectComponent";
 import { useContext, useEffect, useState } from "react";
 import { Islogin } from "../../../Data/Context";
+import { Endpoints } from "../../../Api";
+import axios from "axios";
 
 function Profilepage() {
-  const { Loginstatus, Username } = useContext(Islogin);
+
+  const [islogn, setlogin] = useState();
+  const [username,setusername] = useState();
+  const api = Endpoints.Islogin;
+
+  async function checkingLogin() {
+    const response = await axios.get(api, {
+      withCredentials: true,
+    });
+    setlogin(response.data.success)
+    setusername(response.data.userdata)
+    console.log(response,"This is from profile")
+    
+  }
+  console.log(islogn)
+
+  useEffect(() => {checkingLogin()}, []);
 
   return (
     <>
-      {Loginstatus ? (
+      {islogn ? (
         <div className="Full_Profile_pagee">
           <div className="Username_profile_image ">
             <FaUserCircle className="usericons " />
             <p className="username_section ">Username</p>
-            <p className="username_section emailusernamesection">{Username}</p>
+            <p className="username_section emailusernamesection">{username}</p>
           </div>
           <Link to="/InformationPage">
             <div className="About_us_section div_for_profilepagee">
@@ -56,7 +74,7 @@ function Profilepage() {
           <div className="Logoutt_us_section div_for_profilepagee">
             <FiLogOut className="Login_icons iconsforProfilepage " />
             <Link to="/Loginpage">
-              {Loginstatus ? (
+              {islogn ? (
                 <p className="Logoutfunction Para_profile">Logout</p>
               ) : (
                 <p className="Logoutfunction Para_profile">Login</p>

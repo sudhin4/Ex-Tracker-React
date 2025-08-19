@@ -24,6 +24,7 @@ import ContactPage from './assets/Pages/Profile/InsideProfile/Contact/ContactPag
 import TransactionInside from './assets/Component/TransactionInside/TransactionInside.jsx'
 import LoginDirectComponent from './assets/Pages/LoginDirectPage/LoginDirectComponent.jsx'
 import SuccessfullyLoginPage from './assets/Pages/Login/successfullylogin.jsx'
+import NotfoundPage from './assets/Component/RedirectPage/NotfounPage.jsx'
 
 
 createRoot(document.getElementById('root')).render(

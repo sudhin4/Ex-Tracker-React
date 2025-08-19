@@ -29,7 +29,7 @@ import axios from "axios";
 
 function App() {
   const [userdata, setuserdata] = useState([]);
-  const [isactive, setactive] = useState("NotLogin");
+
   const [islogin, setlogin] = useState();
   const [isusername, setusername] = useState();
 
@@ -44,6 +44,7 @@ function App() {
 
       const loginstatus = response.data.success;
 
+      console.log(response,"This is from app")
       setusername(response.data.userdata);
       setlogin(loginstatus);
     } catch {
@@ -55,7 +56,25 @@ function App() {
     checkingfunction();
   }, []);
 
-  console.log(islogin, isusername, "From app");
+  useEffect(() => {
+    // check if already refreshed
+    const hasRefreshed = sessionStorage.getItem("hasRefreshed");
+
+    if (!hasRefreshed) {
+      sessionStorage.setItem("hasRefreshed", "true");
+      window.location.reload(); // refresh once
+    }
+  }, []);
+
+
+  const [idvalue,setidvalue] = useState();
+
+  function gettingidfromlasttransaction(value){
+    setidvalue(value);
+    console.log(value,"THis is app id")
+  }
+
+
 
   return (
     <>
@@ -102,7 +121,7 @@ function App() {
                   />
                   <Route
                     path="/$Transaction&History@"
-                    element={<Dashboard />}
+                    element={<Dashboard gettingid={gettingidfromlasttransaction}/>}
                   />
                   <Route path="/&Userprofile" element={<Profilepage />} />
                   <Route
@@ -118,7 +137,7 @@ function App() {
                   />
                   <Route
                     path="/TransactionPage"
-                    element={<TransactionInside />}
+                    element={<TransactionInside idvaluefunction={idvalue} />}
                   />
                   <Route path="/Contactpage" element={<ContactPage />} />
                 </Routes>

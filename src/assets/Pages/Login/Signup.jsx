@@ -40,7 +40,7 @@ function Singup() {
       console.log(response);
       setapimessage(response.data.message);
       setsuccessstatus(response.data.success);
-    } catch (error) {}
+    } catch (error) {console.log(error)}
   }
 
   function clickbtntosendfunction() {
@@ -92,13 +92,13 @@ function Singup() {
           </div>
           <div className="input_section email_divv">
             <label htmlFor="" className="label_input">
-              Email:
+              Username:
             </label>
             <input
               type="email"
               name=""
               id="email_singnup"
-              placeholder="Example@gmail.com"
+              placeholder="@Jhon_Don"
               className="input_emaill inputss"
               value={emaildata}
               onChange={getemailvalue}

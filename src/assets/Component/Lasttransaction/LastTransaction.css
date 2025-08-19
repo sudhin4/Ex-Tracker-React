@@ -100,16 +100,20 @@
         
     }
     .category_INLASTTransaction{
-        color: rgba(0, 0, 0, 0.422);
+        color: rgba(0, 15, 2, 0.692);
         font-size: 14px;
     }
+    
     .expanse_amount_divv1222{
         line-height: 10px;
         position: relative;
-        left: 110px;
+        left: 75px;
     }
     .Data_forAMOUNTExpanse{
         color: rgba(255, 0, 0, 0.568);
+    }
+    .Data_forAMOUNTIncome{
+        color: rgba(3, 116, 27, 0.568);
     }
     .delete_icons_lasttransaction{
         color: rgba(255, 0, 0, 0.411);

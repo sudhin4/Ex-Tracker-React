@@ -119,6 +119,16 @@
         position: relative;
         top: 50px;
     }
+    .first_heading_filterdivv{
+        display: none;
+    }
+    .LastTransactin_heading{
+        font-family: "Inter";
+        font-weight: 500;
+        font-size: 22px;
+        position: relative;
+        left: 18px;
+    }
     
 }
 

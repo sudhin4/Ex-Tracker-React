@@ -155,3 +155,32 @@ export const IncomeImage=[
 
 
 ]
+
+export const gettingImage = {
+    Bonus:Bonus,
+    Business:Business,
+    Freelance:Freelance,
+    Gift:gift,
+    Investment:Investment,
+    Pension:Pension,
+    Rental:Rental,
+    Salary:Salary,
+    Other:Others,
+    Clothing:clothes,
+    Loan:loan,
+    Education:Education,
+    Entertainment:Entertainment,
+    Food:food,
+    Fuel:Fuel,
+    Groceries:Groceries,
+    Gym:Gym,
+    Medical:Medical,
+    Insurance:Insurance,
+    Maintaince:Maintaince,
+    PublicTransport:Publictransport,
+    Rent:Rent,
+    Subscription:Subscription,
+    Travel:travel,
+    Utilities:Utilites,
+    Others:Others
+}

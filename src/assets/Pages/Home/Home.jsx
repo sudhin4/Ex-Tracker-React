@@ -4,9 +4,7 @@ import "../Home/Home.css";
 import { ExpanseCard } from "../../Component/Incomeandexpanse/IncomeCard";
 import { FaPlus } from "react-icons/fa6";
 import Upcomingpayment from "../../Component/UpcomingPayment/UpcomingPayment";
-import  {
-  DataInLastTransaction,
-} from "../../Component/Lasttransaction/LastTransaction";
+import { DataInLastTransaction } from "../../Component/Lasttransaction/LastTransaction";
 import MenuBar from "../../Component/LeftTaskbar/MenuBar";
 
 import { useState } from "react";
@@ -14,8 +12,10 @@ import { Link } from "react-router-dom";
 import Newaddbtn_ from "../../Component/NewAddbtn_design/Newaddtn";
 import Navbarbtm from "../../Component/NavbarBottom/Navbarbtm";
 import { MdOutlineCopyright } from "react-icons/md";
+import NotfoundPage from "../../Component/RedirectPage/NotfounPage";
 
-import NotransactionImage4 from "../Home/bill 2.png";
+import Dashboard from "../LastTransaction/Dashboard";
+import LastTransactionPage from "../LastTransaction/LastTransactionPage";
 
 function Home() {
   return (
@@ -29,7 +29,6 @@ function Home() {
               <ExpanseCard />
             </div>
           </div>
-          
 
           <div className="upcoming_payment_details_div">
             <h1 className="upcomingPayment_heading___">Upcoming Payments</h1>
@@ -37,27 +36,13 @@ function Home() {
               <Upcomingpayment />
             </div>
           </div>
-        
 
           <div className="LAstTransaction_home_Divvv">
-            <div className="first_heading_filters">
-              <h1 className="LaasTTransaction_heading_INHOME">
-                Last Transactions
-              </h1>
+            <div className="LastTransactionHeading_divv">
+              <h2 className="LastTransactin_heading">Last Transaction</h2>
             </div>
-
             <div className="DaTa_component_div">
-              <img
-                src={NotransactionImage4}
-                className="NotransactionHave"
-                alt=""
-              />
-              <h2 className="Notransaction_heading">No Transaction</h2>
-
-              {/* <DataInLastTransaction />
-                <DataInLastTransaction />
-                <DataInLastTransaction />
-                <DataInLastTransaction /> */}
+              <Dashboard />
             </div>
           </div>
         </div>
