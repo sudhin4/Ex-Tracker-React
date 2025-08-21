@@ -25,6 +25,12 @@ import TransactionInside from './assets/Component/TransactionInside/TransactionI
 import LoginDirectComponent from './assets/Pages/LoginDirectPage/LoginDirectComponent.jsx'
 import SuccessfullyLoginPage from './assets/Pages/Login/successfullylogin.jsx'
 import NotfoundPage from './assets/Component/RedirectPage/NotfounPage.jsx'
+import ExpansePiechart from './assets/Component/ChartSection/Piechart.jsx'
+
+import ExpenseBarChart from './assets/Component/ChartSection/LineChart.jsx'
+import FullchartSection from './assets/Component/ChartSection/FullchartSection.jsx'
+
+
 
 
 createRoot(document.getElementById('root')).render(

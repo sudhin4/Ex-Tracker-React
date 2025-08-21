@@ -56,7 +56,7 @@ function TransactionInside({ idvaluefunction }) {
             <strong>
               <h2 className="transactionHeaidngss">Transaction</h2>
             </strong>
-            <h4 className="transactioncontent transaction_name_content">
+            <h4 className="transactioncontent transaction_name_content Trnsationnnn">
               {isvalue?.TransactionName}
             </h4>
           </div>

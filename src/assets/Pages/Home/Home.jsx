@@ -32,18 +32,19 @@ function Home() {
 
           <div className="upcoming_payment_details_div">
             <h1 className="upcomingPayment_heading___">Upcoming Payments</h1>
-            <div className="component_upcoming_payment">
+           <div className="component_upcoming_payment">
               <Upcomingpayment />
-            </div>
+            </div> 
           </div>
 
           <div className="LAstTransaction_home_Divvv">
             <div className="LastTransactionHeading_divv">
               <h2 className="LastTransactin_heading">Last Transaction</h2>
-            </div>
-            <div className="DaTa_component_div">
               <Dashboard />
             </div>
+            {/* <div className="DaTa_component_div">
+              
+            </div> */}
           </div>
         </div>
       </div>

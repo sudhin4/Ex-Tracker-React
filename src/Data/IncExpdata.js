@@ -15,6 +15,7 @@ import Subscription from '../Images/Expanse categories/Subscription Image.png';
 import travel from '../Images/Expanse categories/travel vacation Image.png';
 import Utilites from '../Images/Expanse categories/utilities.png'
 import Others from '../Images/Expanse categories/Others Image.png'
+import friends from '../Images/Income Categories/people.png'
 
 
 
@@ -96,6 +97,10 @@ export const ExpanseImage = [
         image:Utilites
     },
     {
+        name : 'Friends',
+        image: friends,
+    },
+    {
         name: 'Others',
         image:Others,
     }
@@ -146,6 +151,11 @@ export const IncomeImage=[
         name:'Salary',
         image:Salary,
     },
+    {
+        name:'Friends',
+        image:Salary,
+    },
+
     {
         name:'Others',
         image:Others,

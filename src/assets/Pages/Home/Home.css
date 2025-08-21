@@ -124,11 +124,15 @@
     }
     .LastTransactin_heading{
         font-family: "Inter";
-        font-weight: 500;
+        font-weight: 600;
         font-size: 22px;
         position: relative;
         left: 18px;
     }
-    
+    .DaTa_component_div{
+        position: relative;
+        right: 50px;
+        
+    }
 }
 

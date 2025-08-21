@@ -1,16 +1,32 @@
 import "../Incomeandexpanse/IncomeCard.css";
 import CalenderImage from './CalenderImage.png'
 import { Maincontextdata } from "../../../Data/Context";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaCalendar } from "react-icons/fa";
+import { Endpoints } from "../../../Api";
+import axios from "axios";
 
 
 function IncomeCard() {
+  
+  const [isincomevalue,setincomevalue] = useState()
   
   const { maindata } = useContext(Maincontextdata);
 
   useEffect(()=>{
     console.log(maindata,"Incomecard section")
+  },[])
+
+  const api = Endpoints.Totalbalance;
+
+  async function gettingvalue(){
+    const response = await axios.get(api,{withCredentials:true});
+    setincomevalue(response.data.Incomevalue);
+
+  }
+
+  useEffect(()=>{
+    gettingvalue();
   },[])
   
 
@@ -18,7 +34,7 @@ function IncomeCard() {
     <>
       <div className="Whole_Income_card">
         <div className="Carddd_income">
-          <h2 className="Price_Income_heading">₹45,500</h2>
+          <h2 className="Price_Income_heading">₹{isincomevalue? isincomevalue.toLocaleString("en-IN") :"0"}</h2>
           <h4 className="Income_heading_section Income_headdd">Income</h4>
           <div className="calender_imagediv">
             <FaCalendar className="calenderIMage_section" />
@@ -33,11 +49,23 @@ function IncomeCard() {
 export default IncomeCard;
 
 export function ExpanseCard() {
+
+  const [isexpansevalue,setexpansevalue] = useState()
+
+  const api = Endpoints.Totalbalance
+  async function gettingvalue(){
+    const response = await axios.get(api,{withCredentials:true});
+    setexpansevalue(response.data.Expansevalue);
+  }
+
+  useEffect(()=>{
+    gettingvalue();
+  },[])
   return (
     <>
       <div className="Whole_Income_card">
         <div className="Carddd_income">
-          <h2 className="Price_Income_heading Expanses_amount">₹45,500</h2>
+          <h2 className="Price_Income_heading Expanses_amount">₹{isexpansevalue ?  isexpansevalue.toLocaleString('en-IN'):'0'}</h2>
           <h4 className="Income_heading_section">Expanse</h4>
           <div className="calender_imagediv">
             <FaCalendar  className="calenderIMage_section" />

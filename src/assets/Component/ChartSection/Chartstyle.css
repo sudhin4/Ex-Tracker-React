@@ -1,0 +1,55 @@
+/* Card container for Pie Chart */
+.pie-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;     /* light gray border */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+/* Hover effect */
+.pie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Title styling */
+.pie-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Responsive container for Pie Chart */
+.pie-container {
+  height: 450px;
+  width: 100%;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .pie-card {
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  }
+  .pie-title {
+    font-size: 1.2rem;
+  }
+  .pie-container {
+    height: 380px; /* slightly smaller chart on mobile */
+  }
+  .pie-title_bottom{
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 20px;
+    position: relative;
+    top: 330px;
+    left: 35%;
+  }
+}

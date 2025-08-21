@@ -7,4 +7,5 @@ export const Endpoints = {
     AddIncomeExpanseData : `${api_base}/AddingIncomeExpanseData`,
     LastTransaction : `${api_base}/LastTransactionPage`,
     InsidePage : `${api_base}/Singlepageroute`,
+    Totalbalance : `${api_base}/TotalBalance`,
 }

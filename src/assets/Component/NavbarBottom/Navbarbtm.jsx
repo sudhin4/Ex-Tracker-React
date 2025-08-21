@@ -1,8 +1,10 @@
 import { HiOutlineHome } from "react-icons/hi";
 import { FaUser } from "react-icons/fa6";
-import Transaction from "./transaction.png";
-import upcoming_payment from "./upcoming.png";
+
 import "../NavbarBottom/Navbarbtm.css";
+
+import { FaChartPie } from "react-icons/fa";
+
 //clicked icons
 import { HiHome } from "react-icons/hi2";
 import { RiCalendarScheduleFill } from "react-icons/ri";
@@ -13,7 +15,6 @@ import { IoIosAddCircleOutline } from "react-icons/io";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoCalendarNumber } from "react-icons/io5";
-
 
 function Navbarbtm() {
   const [isclickedbutton, setclickedbutton] = useState("Home");
@@ -43,15 +44,12 @@ function Navbarbtm() {
               onClick={() => setclickedbutton("Upcoming")}
             >
               {isclickedbutton === "Upcoming" ? (
-                <RiCalendarScheduleFill className="footernavbaricons Homeicons" />
+                <FaChartPie className="footernavbaricons Homeicons" />
               ) : (
-                <IoCalendarNumber
-                  className=" UpcomingIcons imageIconss"
-                  
-                />
+                <FaChartPie className=" UpcomingIcons imageIconss" />
               )}
 
-              <p className="Paragraph_bottom">Upcoming</p>
+              <p className="Paragraph_bottom">Dashboard</p>
             </div>
           </Link>
 
@@ -74,10 +72,7 @@ function Navbarbtm() {
               {isclickedbutton === "Last" ? (
                 <LuArrowDownUp className="footernavbaricons Homeicons" />
               ) : (
-                <LuArrowDownUp
-                  className=" TransactionIcons imageIconss"
-                  
-                />
+                <LuArrowDownUp className=" TransactionIcons imageIconss" />
               )}
 
               <p className="Paragraph_bottom">History</p>

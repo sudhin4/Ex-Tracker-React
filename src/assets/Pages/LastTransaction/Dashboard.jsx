@@ -43,7 +43,10 @@ function Dashboard({ gettingid }) {
           ))}
         </div>
       ) : (
-        <NotfoundPage />
+        <div className="NotfoundPageIndashboard">
+          <NotfoundPage />
+        </div>
+        
       )}
     </>
   );

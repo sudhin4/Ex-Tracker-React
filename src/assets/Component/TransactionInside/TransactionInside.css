@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 .Image_for_insideTransaction{
     width: 80px;
     height: 80px;
 }
 .price_for_indeptpage{
-    font-family: "Sans-serif";
+    font-family: "Inter";
     font-weight: 600;
     font-size: 30px;
     color: green;
@@ -20,13 +23,13 @@
     line-height: 0.1px;
 }
 .transactionHeaidngss{
-    font-family: 'Sans-serif';
-    
+    font-family: 'Inter';
+    font-weight: 500;
     font-size: 15px;
 }
 .transactioncontent{
-    font-family: "Sans-serif";
-    font-weight: 400;
+    font-family: "Inter";
+    font-weight: 600;
     font-size: 15px;
     position: absolute;
     right: 20px;
@@ -37,9 +40,13 @@
     align-items: center;   
 }
 .transaction_name_content{
-    width: 105px;
+    width: max-content;
     line-height: 1;
+    position: absolute;
+    right: 20px;
+
 }
+
 .OtherInformationdivv{
     display: flex;
     flex-direction: column;
@@ -58,7 +65,7 @@
     width: 90px;
     height: 35px;
     padding: 5px;
-    font-family: 'Sans-serif';
+    font-family: 'Inter';
     font-weight: 600;
     font-size: 16px;
     outline: none;
@@ -89,8 +96,8 @@
     margin-top: 25px;
 }
 .Notess{
-    font-family: 'Sans-serif';
-    
+    font-family: 'Inter';
+    font-weight: 500;
     font-family: 19px;
 }
 .wentwrong_askquestion{

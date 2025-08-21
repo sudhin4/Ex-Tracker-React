@@ -4,6 +4,7 @@
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 19px;
+    width: 200px;
 }
 .Balanace_amount_div{
     display: flex;
@@ -42,12 +43,14 @@
     align-items: center;
     position: relative;
     left: 20px;
-    gap: 67%;
+    gap: 57%;
     
 }
 .Logo_three_btn{
-    font-size: 25px;
+    font-size: 29px;
     color: rgba(255, 255, 255, 0.79);
+    position: relative;
+    right: 30px;
 }
 .bottom_content_divvv{
     display: flex;
@@ -67,8 +70,10 @@
 .Accout_name_User_name{
     font-family: 'Roboto';
     font-weight: 700;
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.758);
+    position: relative;
+    bottom: 10px;
 }
 .AccountName_userName_div{
     position: relative;

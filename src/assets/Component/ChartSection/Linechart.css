@@ -1,0 +1,57 @@
+/* Chart container (same as line chart style) */
+.bar-chart {
+  height: 350px;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 15px;
+  padding-bottom: 80px;
+}
+
+/* Axis tick labels */
+.bar-chart text {
+  font-size: 14px !important;
+  font-family: "Poppins", sans-serif !important;
+  fill: #333 !important;
+}
+
+/* Axis legends (Months, Amount) */
+.bar-chart text[dominant-baseline="middle"] {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  fill: #111 !important;
+}
+
+/* Bars */
+.bar-chart rect {
+  rx: 6; /* rounded corners on bars */
+  transition: all 0.3s ease;
+}
+
+.bar-chart rect:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* small hover zoom */
+}
+
+/* Tooltip styling */
+.bar-chart .tooltip {
+  font-family: "Inter";
+  font-size: 19px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: rgb(9, 167, 9);
+}
+.Bar_heading{
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 19px;
+    position: relative;
+    left: 20%;
+}
