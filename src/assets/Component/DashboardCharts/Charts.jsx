@@ -5,6 +5,8 @@ import { Bar, Doughnut,Line } from "react-chartjs-2";
 function Charts() {
   return (
     <>
+
+    
       <div className="whole_chart_component">
         <div className=" Barchart_divv   ">
           <Bar

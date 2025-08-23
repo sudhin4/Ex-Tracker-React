@@ -134,5 +134,10 @@
         right: 50px;
         
     }
+    .ImageforDashboardsectionImage{
+        width: 95%;
+        position: relative;
+        right: 13px;
+    }
 }
 

@@ -9,7 +9,7 @@ import axios from "axios";
 function MainCard() {
 
 
-  const { Username } = useContext(Islogin);
+  const { Username,gettotal } = useContext(Islogin);
   console.log(Username)
   const [istotalamount,settotalamount] = useState();
 
@@ -19,11 +19,14 @@ function MainCard() {
     const response = await axios.get(api,{withCredentials:true});
     console.log(response,"The totalbalance");
     settotalamount(response.data.TotalMoney)
+    gettotal(response.data.TotalMoney);
   }
 
   useEffect(()=>{
     gettotalbalance();
   })
+
+  
 
   return (
     <>

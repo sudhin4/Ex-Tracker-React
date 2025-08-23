@@ -1,13 +1,15 @@
 import "./whole.css";
 import contractimage from "../Login/contract.png";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Endpoints } from "../../../Api";
 import SuccessfullyLoginPage from "./successfullylogin";
+import { Islogin } from "../../../Data/Context";
 
 function Singup() {
   const Navigate = useNavigate();
+  const { isloginorsignupcontext } = useContext(Islogin)
 
   const [emaildata, setemaildata] = useState();
   const [passworddata, setpassworddata] = useState("");
@@ -64,11 +66,10 @@ function Singup() {
   //check the successstatus is true or false
   useEffect(() => {
     if (issuccesstatus == true) {
-      //check the status is true or false
-      setmodelopen(false);
-
+      
+      isloginorsignupcontext('Signup')
+      navigate('/sucesslogin')
       setTimeout(() => {
-        setmodelopen(true); //model close funtion after 3sec
         navigate("/");
       }, 3000);
     }

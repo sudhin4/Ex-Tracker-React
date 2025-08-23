@@ -1,0 +1,30 @@
+.IncomeButtonChart,.ExpanseButtonChart{
+    width: 140px;
+    height: 50px;
+    color: white;
+    background-color: black;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+  
+}
+.Incomeandexpansebuttondiv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.IncomeButtonChartclick,.ExpansebuttonChartclick{
+    width: 140px;
+    height: 50px;
+    color: black;
+    background-color: white;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 10px;
+}

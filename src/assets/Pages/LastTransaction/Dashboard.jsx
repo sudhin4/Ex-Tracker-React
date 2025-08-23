@@ -6,15 +6,27 @@ import { Endpoints } from "../../../Api";
 import { gettingImage } from "../../../Data/IncExpdata";
 import { useState, useEffect } from "react";
 import NotfoundPage from "../../Component/RedirectPage/NotfounPage";
+import Loadinganimation from "../../Component/LoadingPage/LodingPage";
 
 function Dashboard({ gettingid }) {
   const [data, setdata] = useState([]);
+  const [loading, setloading] = useState(true);
   const api = Endpoints.LastTransaction;
 
   async function apifunction() {
-    const response = await axios.get(api, { withCredentials: true });
-    console.log(response);
-    setdata(response.data.LastTransaction);
+    try {
+      setloading(true);
+      const response = await axios.get(api, { withCredentials: true });
+      console.log(response);
+      setdata(response.data.LastTransaction);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setTimeout(() => {
+        setloading(false);
+      }, 100);
+      
+    }
   }
 
   useEffect(() => {
@@ -23,30 +35,35 @@ function Dashboard({ gettingid }) {
 
   return (
     <>
-      {data ? (
-        <div className="lastTransaction_page_section">
-          {data.map((item, index) => (
-            <div key={index}>
-              <DataInLastTransaction
-                gettingidfunction={gettingid}
-                id={item._id}
-                Name={item.TransactionName}
-                Image={gettingImage[item.TransactionName]}
-                Date={new Date(item.Date).toLocaleDateString("en-IN")}
-                Category={item.Category}
-                Amount={item.Amount.toLocaleString("en-IN", {
-                  style: "currency",
-                  currency: "INR",
-                })}
-              />
-            </div>
-          ))}
-        </div>
+      {loading ? (
+        <Loadinganimation />
       ) : (
-        <div className="NotfoundPageIndashboard">
-          <NotfoundPage />
+        <div>
+          {data ? (
+            <div className="lastTransaction_page_section">
+              {data.map((item, index) => (
+                <div key={index}>
+                  <DataInLastTransaction
+                    gettingidfunction={gettingid}
+                    id={item._id}
+                    Name={item.TransactionName}
+                    Image={gettingImage[item.TransactionName]}
+                    Date={new Date(item.Date).toLocaleDateString("en-IN")}
+                    Category={item.Category}
+                    Amount={item.Amount.toLocaleString("en-IN", {
+                      style: "currency",
+                      currency: "INR",
+                    })}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="NotfoundPageIndashboard">
+              <NotfoundPage />
+            </div>
+          )}
         </div>
-        
       )}
     </>
   );

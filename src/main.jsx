@@ -29,6 +29,9 @@ import ExpansePiechart from './assets/Component/ChartSection/Piechart.jsx'
 
 import ExpenseBarChart from './assets/Component/ChartSection/LineChart.jsx'
 import FullchartSection from './assets/Component/ChartSection/FullchartSection.jsx'
+import Loadinganimation from './assets/Component/LoadingPage/LodingPage.jsx'
+import SuccessAnimation from './assets/Pages/SuccessAnimation/SuccessAnimation.jsx'
+import Addedsuccess from './assets/Component/successadded/SuccessAdded.jsx'
 
 
 

@@ -3,19 +3,21 @@ import authentication from "../Login/authenticity.png";
 import "../Login/whole.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Endpoints } from "../../../Api";
 import SuccessfullyLoginPage from "./successfullylogin";
+import { Islogin } from "../../../Data/Context";
 
 function LoginPage() {
   const navigate = useNavigate();
+  const {isloginorsignupcontext} =useContext(Islogin)
   const [userEmail, setemail] = useState();
   const [userPassword, setuserpassword] = useState();
   const [statuscode, setstatusscode] = useState();
   const [isvalue, setvalue] = useState(false);
   const [ismodelopen, setmodelopen] = useState();
   const [isapidata, setapidata] = useState();
-
+  const [servererror,seterror] = useState(false)
   const api = Endpoints.login;
 
   function getemailfunction(e) {
@@ -35,31 +37,25 @@ function LoginPage() {
       console.log(response);
       setstatusscode(response.data.success);
       setapidata(response.data.data);
-
+      
     } else {
     }
   }
 
-
-  useEffect(()=>{
+  useEffect(() => {
     if (statuscode == true) {
-        setmodelopen(true);
-        setTimeout(() => {
-          setmodelopen(false);
-          navigate("/");
-        }, 2000);
-      }
-  },[statuscode])
+      isloginorsignupcontext("Login")
+      navigate("/sucesslogin")
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    }
+  }, [statuscode]);
 
   console.log(statuscode);
 
   return (
     <>
-      {ismodelopen ? (
-        <div className="successfullYlogin_componenttt">
-          <SuccessfullyLoginPage />
-        </div>
-      ) : null}
       <div className="parent_div">
         <div className="whole_login_div">
           <div className="Login_heading_div">

@@ -2,11 +2,11 @@ import { ResponsiveBar } from "@nivo/bar";
 import "./Linechart.css";
 
 const data = [
-  { month: "Jan", Income: 600, Expense: 400 },
-  { month: "Feb", Income: 700, Expense: 300 },
-  { month: "Mar", Income: 650, Expense: 500 },
-  { month: "Apr", Income: 800, Expense: 2400 },
-  { month: "May", Income: 900, Expense: 350 },
+  { month: "Jan", Income: 600, },
+  { month: "Feb", Income: 700,  },
+  { month: "Mar", Income: 650,  },
+  { month: "Apr", Income: 800,  },
+  { month: "May", Income: 900, },
 //   { month: "june", Income: 900, Expense: 350 },
 //   { month: "july", Income: 900, Expense: 350 },
 //   { month: "aug", Income: 900, Expense: 350 },

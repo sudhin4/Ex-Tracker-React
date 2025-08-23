@@ -10,6 +10,7 @@ import { Islogin } from "../../../Data/Context";
 import LoginDirectComponent from "../../Pages/LoginDirectPage/LoginDirectComponent";
 import axios from "axios";
 import { Endpoints } from "../../../Api";
+import { useNavigate } from "react-router-dom";
 
 function Newaddbtn_({ getuserdata }) {
   //checking is login or not
@@ -17,6 +18,8 @@ function Newaddbtn_({ getuserdata }) {
   
   const api = Endpoints.AddIncomeExpanseData;
   const isloginapi = Endpoints.Islogin
+
+  const naviagate = useNavigate();
 
   const [islogin, setislogin] = useState();
 
@@ -61,7 +64,7 @@ async  function checkinglogin() {
       },
       { withCredentials: true }
     );
-    console.log(response);
+    
   }
 
   const [getdateiscorrect, setdateiscorrect] = useState(false);
@@ -78,6 +81,12 @@ async  function checkinglogin() {
         setgetdate("");
         setgetnote("");
         setdateiscorrect(false);
+
+        naviagate('/SuccessAdded')
+        setTimeout(() => {
+          naviagate('/')
+        }, 4000);
+
       } else {
         setdateiscorrect(true);
       }

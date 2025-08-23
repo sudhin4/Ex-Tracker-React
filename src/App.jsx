@@ -26,12 +26,20 @@ import { Islogin } from "./Data/Context";
 import Singup from "./assets/Pages/Login/Signup";
 import { Endpoints } from "./Api";
 import axios from "axios";
+import Loadinganimation from "./assets/Component/LoadingPage/LodingPage";
+import SuccessAnimation from "./assets/Pages/SuccessAnimation/SuccessAnimation";
+import Erroranimation from "./assets/Component/ErrorAnimation/ErrorAnimationcomp";
+import { IoEllipseSharp } from "react-icons/io5";
+
+import Addedsuccess from "../src/assets/Component/successadded/SuccessAdded";
 
 function App() {
   const [userdata, setuserdata] = useState([]);
-
   const [islogin, setlogin] = useState();
   const [isusername, setusername] = useState();
+  const [loading, setloading] = useState(true);
+  const [iserror, seterror] = useState(false);
+  const [isloginorsignup,setloginorsignup] = useState()
 
   function getdatafromnewaddbtn(value) {
     setuserdata(value);
@@ -40,15 +48,23 @@ function App() {
 
   async function checkingfunction() {
     try {
+      setloading(true);
       const response = await axios.get(api, { withCredentials: true });
 
       const loginstatus = response.data.success;
-
-      console.log(response,"This is from app")
+      console.log(response, "This is from app");
       setusername(response.data.userdata);
       setlogin(loginstatus);
-    } catch {
-      null;
+      
+    } catch (error) {
+      if(error.message="Network Error"){
+        seterror(true);
+      }
+      
+    } finally {
+      setTimeout(() => {
+        setloading(false);
+      }, 2000);
     }
   }
 
@@ -66,86 +82,107 @@ function App() {
     }
   }, []);
 
+  const [idvalue, setidvalue] = useState();
 
-  const [idvalue,setidvalue] = useState();
-
-  function gettingidfromlasttransaction(value){
+  function gettingidfromlasttransaction(value) {
     setidvalue(value);
-    console.log(value,"THis is app id")
   }
 
-
+  const [ischarttotal, setcharttotal] = useState();
+  const [isincomevalue, setincomevalue] = useState();
+  const [isexpansevalue, setexpansevalue] = useState();
 
   return (
     <>
-      <Islogin.Provider value={{ Loginstatus: islogin, Username: isusername }}>
-        <Maincontextdata value={{ maindata: userdata }}>
-          <Router>
-            <div className="WHole_app_div">
-              <Header />
-              <div className="MenuBar_othercompContDiv">
-                <div className="Left_MenuBar_section_IN_home">
-                  {/* <MenuBar /> */}
-                </div>
+    {iserror ?<Erroranimation/> : <>{loading ? (
+        <Loadinganimation />
+      ) : (
+        <Islogin.Provider
+          value={{
+            Loginstatus: islogin,
+            Username: isusername,
+            gettotal: setcharttotal,
+            getincometotal: setincomevalue,
+            getexpansetotal: setexpansevalue,
+            totalvalue: ischarttotal,
+            incometotalvalue: isincomevalue,
+            expansetotalvalue: isexpansevalue,
+            isloginorsignupcontext:setloginorsignup,
+          }}
+        >
+          <Maincontextdata value={{ maindata: userdata }}>
+            <Router>
+              <div className="WHole_app_div">
+                <Header />
+                <div className="MenuBar_othercompContDiv">
+                  <div className="Left_MenuBar_section_IN_home">
+                    {/* <MenuBar /> */}
+                  </div>
 
-                <div className="Navbarbtom232m">
-                  <Navbarbtm />
-                </div>
+                  <div className="Navbarbtom232m">
+                    <Navbarbtm />
+                  </div>
 
-                <Routes>
-                  <Route
-                    path="/"
-                    element={
-                      <div className="Right_section_pages">
-                        <Home />
-                      </div>
-                    }
-                  />
-                  <Route
-                    path="/Lasttransaction"
-                    element={
-                      <div className="Dashboard_APp_section">
-                        <Dashboard />
-                      </div>
-                    }
-                  />
-                  <Route
-                    path="/AddincomeorExpansepage"
-                    element={
-                      <div className="newbtnsection">
-                        <div className="component_of_theaddbtn">
-                          <Newaddbtn_ getuserdata={getdatafromnewaddbtn} />
+                  <Routes>
+                    <Route
+                      path="/"
+                      element={
+                        <div className="Right_section_pages">
+                          <Home />
                         </div>
-                      </div>
-                    }
-                  />
-                  <Route
-                    path="/$Transaction&History@"
-                    element={<Dashboard gettingid={gettingidfromlasttransaction}/>}
-                  />
-                  <Route path="/&Userprofile" element={<Profilepage />} />
-                  <Route
-                    path="/Upcomingpayment&"
-                    element={<UpcomingPaymentPage />}
-                  />
-                  <Route path="/Loginpage" element={<LoginPage />} />
-                  <Route path="/Signuppage" element={<Singup />} />
-                  <Route path="/Privacypolicy" element={<PrivacyPolicy />} />
-                  <Route
-                    path="/InformationPage"
-                    element={<InformationPage />}
-                  />
-                  <Route
-                    path="/TransactionPage"
-                    element={<TransactionInside idvaluefunction={idvalue} />}
-                  />
-                  <Route path="/Contactpage" element={<ContactPage />} />
-                </Routes>
+                      }
+                    />
+                    <Route
+                      path="/Lasttransaction"
+                      element={
+                        <div className="Dashboard_APp_section">
+                          <Dashboard />
+                        </div>
+                      }
+                    />
+                    <Route
+                      path="/AddincomeorExpansepage"
+                      element={
+                        <div className="newbtnsection">
+                          <div className="component_of_theaddbtn">
+                            <Newaddbtn_ getuserdata={getdatafromnewaddbtn} />
+                          </div>
+                        </div>
+                      }
+                    />
+                    <Route
+                      path="/$Transaction&History@"
+                      element={
+                        <Dashboard gettingid={gettingidfromlasttransaction} />
+                      }
+                    />
+                    <Route path="/&Userprofile" element={<Profilepage />} />
+                    <Route
+                      path="/Upcomingpayment&"
+                      element={<UpcomingPaymentPage />}
+                    />
+                    <Route path="/Loginpage" element={<LoginPage  />} />
+                    <Route path="/Signuppage" element={<Singup />} />
+                    <Route path="/Privacypolicy" element={<PrivacyPolicy />} />
+                    <Route
+                      path="/InformationPage"
+                      element={<InformationPage />}
+                    />
+                    <Route
+                      path="/TransactionPage"
+                      element={<TransactionInside idvaluefunction={idvalue} />}
+                    />
+                    <Route path="/Contactpage" element={<ContactPage />} />
+                    <Route path="/sucesslogin" element={<SuccessAnimation name={isloginorsignup} />} />
+                    <Route path="/SuccessAdded" element={<Addedsuccess/>} />
+                  </Routes>
+                </div>
               </div>
-            </div>
-          </Router>
-        </Maincontextdata>
-      </Islogin.Provider>
+            </Router>
+          </Maincontextdata>
+        </Islogin.Provider>
+      )}</>}
+      
     </>
   );
 }

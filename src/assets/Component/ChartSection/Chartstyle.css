@@ -44,12 +44,34 @@
   .pie-container {
     height: 380px; /* slightly smaller chart on mobile */
   }
-  .pie-title_bottom{
+  .piechartpriceheading{
     font-family: "Inter";
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    
+    
     position: relative;
-    top: 330px;
-    left: 35%;
+    bottom: 10px;
+  }
+  .pie-title_bottom_income{
+    color: rgb(5, 180, 5);
+  }
+  .pie-title_bottom_expanses{
+    color: rgb(187, 13, 13);
+  }
+  .TotalPriceInchart{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .amountandtotalheadingINchart{
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+    position: relative;
+    justify-content: center;
+    top: 35%;
+    left: 38%;
+    
   }
 }

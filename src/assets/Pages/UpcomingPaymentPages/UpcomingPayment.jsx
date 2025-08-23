@@ -10,7 +10,7 @@ function UpcomingPaymentPage() {
   return (
     <>
       <div className="UpcomingPaymentPageDIvv">
-        <FullchartSection/>
+        <FullchartSection />
         
       </div>
     </>
