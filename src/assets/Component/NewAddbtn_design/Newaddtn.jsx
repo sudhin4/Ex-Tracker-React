@@ -39,7 +39,7 @@ async  function checkinglogin() {
   const [getamount, setgetamount] = useState();
   const [getdate, setgetdate] = useState("");
   const [getnote, setgetnote] = useState("");
-  const [getcategory, setcategory] = useState("expanses");
+  const [getcategory, setcategory] = useState("Expanses");
   const [getimage, setgetimage] = useState("");
   const [getname, setgetname] = useState("");
   const [gettime, settime] = useState("");
@@ -53,7 +53,7 @@ async  function checkinglogin() {
         Category: getcategory,
         TransactionName: getname,
         Amount: getamount,
-        Date: getdate,
+        Date: new Date(getdate).toLocaleDateString("en-IN"),
         Note: getnote,
         Time: new Date().toLocaleTimeString("en-IN", {
           hour12: true,
@@ -109,13 +109,13 @@ async  function checkinglogin() {
 
   //select income or expanse category method
 
-  function getcategoryyy(value = "expanses") {
+  function getcategoryyy(value = "Expanses") {
     setcategory(value);
-    if (value == "income") {
+    if (value == "Income") {
       setgetcategorystateexpanse(false);
       setgetcategorystateincome(true);
       setincomeorexpanse(true); // check Income or not
-    } else if (value == "expanse") {
+    } else if (value == "Expanses") {
       setgetcategorystateincome(false);
       setgetcategorystateexpanse(true);
       setincomeorexpanse(false); //check Expanse or not
@@ -135,7 +135,7 @@ async  function checkinglogin() {
           <div className="Newadd_btn_design_whole_div">
             <div className="category_choose_div___">
               <div
-                onClick={() => getcategoryyy("income")}
+                onClick={() => getcategoryyy("Income")}
                 className={
                   getcategorystateincome
                     ? "income_btn_section  income_btn_divvv _clicked"
@@ -150,7 +150,7 @@ async  function checkinglogin() {
                 <h2 className="Income_heading">Income</h2>
               </div>
               <div
-                onClick={() => getcategoryyy("expanse")}
+                onClick={() => getcategoryyy("Expanses")}
                 className={
                   getcategorystateexpanse
                     ? "income_btn_divvv _clicked Expanse_btn_section"

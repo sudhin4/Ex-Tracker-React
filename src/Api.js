@@ -1,4 +1,4 @@
-const api_base = "http://192.168.91.226:3000/api/v1"; // "http://localhost:3000/api/v1" is when using in laptop or samedevice
+const api_base = "http://localhost:3000/api/v1"; // "http://localhost:3000/api/v1" is when using in laptop or samedevice
 
 export const Endpoints = {
     signup : `${api_base}/Singupnewuser`,
@@ -9,4 +9,5 @@ export const Endpoints = {
     InsidePage : `${api_base}/Singlepageroute`,
     Totalbalance : `${api_base}/TotalBalance`,
     Piechartvalue : `${api_base}/Chartdatasection`,
+    Logoutsection : `${api_base}/logoutroute`,
 }

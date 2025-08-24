@@ -39,7 +39,7 @@ function Dashboard({ gettingid }) {
         <Loadinganimation />
       ) : (
         <div>
-          {data ? (
+          {data? (
             <div className="lastTransaction_page_section">
               {data.map((item, index) => (
                 <div key={index}>
@@ -48,7 +48,7 @@ function Dashboard({ gettingid }) {
                     id={item._id}
                     Name={item.TransactionName}
                     Image={gettingImage[item.TransactionName]}
-                    Date={new Date(item.Date).toLocaleDateString("en-IN")}
+                    Date={item.Date}
                     Category={item.Category}
                     Amount={item.Amount.toLocaleString("en-IN", {
                       style: "currency",

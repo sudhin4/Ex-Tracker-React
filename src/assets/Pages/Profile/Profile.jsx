@@ -33,6 +33,23 @@ function Profilepage() {
 
   useEffect(() => {checkingLogin()}, []);
 
+  // logoutsection 
+  const logoutapi = Endpoints.Logoutsection;
+
+   async function Logoutfunction(){
+      const response = await axios.get(logoutapi,{withCredentials:true})
+      console.log(response,"Logoutsection")
+      
+    useEffect(()=>{
+
+      },[])
+      
+      
+   
+  }
+
+  
+
   return (
     <>
       {islogn ? (
@@ -73,13 +90,13 @@ function Profilepage() {
 
           <div className="Logoutt_us_section div_for_profilepagee">
             <FiLogOut className="Login_icons iconsforProfilepage " />
-            <Link to="/Loginpage">
+            
               {islogn ? (
-                <p className="Logoutfunction Para_profile">Logout</p>
+                <p className="Logoutfunction Para_profile" onClick={()=>Logoutfunction()}>Logout</p>
               ) : (
                 <p className="Logoutfunction Para_profile">Login</p>
               )}
-            </Link>
+            
           </div>
 
           <div className="CopyrightsDivv">

@@ -15,7 +15,7 @@ import Subscription from '../Images/Expanse categories/Subscription Image.png';
 import travel from '../Images/Expanse categories/travel vacation Image.png';
 import Utilites from '../Images/Expanse categories/utilities.png'
 import Others from '../Images/Expanse categories/Others Image.png'
-import friends from '../Images/Income Categories/people.png'
+import Friends from '../Images/Income Categories/people.png'
 
 
 
@@ -85,7 +85,7 @@ export const ExpanseImage = [
         image:Rent
     },
     {
-        name:'Subsription',
+        name:'Subscription',
         image:Subscription
     },
     {
@@ -98,7 +98,7 @@ export const ExpanseImage = [
     },
     {
         name : 'Friends',
-        image: friends,
+        image: Friends,
     },
     {
         name: 'Others',
@@ -153,7 +153,7 @@ export const IncomeImage=[
     },
     {
         name:'Friends',
-        image:Salary,
+        image:Friends,
     },
 
     {
@@ -192,5 +192,6 @@ export const gettingImage = {
     Subscription:Subscription,
     Travel:travel,
     Utilities:Utilites,
+    Friends:Friends,
     Others:Others
 }
