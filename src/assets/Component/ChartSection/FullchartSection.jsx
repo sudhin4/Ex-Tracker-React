@@ -72,7 +72,7 @@ function FullchartSection() {
                   valueexpanse={isexpansevalue}
                   clicking={isclick}
                 />
-                <ExpenseBarChart />
+                <ExpenseBarChart isincomeorexpanse={isclick} />
               </div>{" "}
             </>
           ) : (

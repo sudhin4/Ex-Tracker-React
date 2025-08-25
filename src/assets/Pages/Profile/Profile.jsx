@@ -13,6 +13,7 @@ import { useContext, useEffect, useState } from "react";
 import { Islogin } from "../../../Data/Context";
 import { Endpoints } from "../../../Api";
 import axios from "axios";
+import Addimage from '../Profile/add.png';
 
 function Profilepage() {
 
@@ -43,10 +44,22 @@ function Profilepage() {
     useEffect(()=>{
 
       },[])
-      
-      
-   
   }
+
+  const [preview,setpreview] = useState()
+
+  const handlegetimage=(e)=>{
+    const file = e.target.files[0]
+    if(file){
+      setpreview(URL.createObjectURL(file));
+     
+    }
+  }
+
+   console.log(preview,"The image seection")
+
+
+ 
 
   
 
@@ -55,7 +68,17 @@ function Profilepage() {
       {islogn ? (
         <div className="Full_Profile_pagee">
           <div className="Username_profile_image ">
-            <FaUserCircle className="usericons " />
+            <div>
+              <input type="file" accept="/images*" onChange={handlegetimage} id="inputfilemethod" />
+             <label htmlFor="inputfilemethod">
+              <img src={Addimage} className="addimageforProfile" alt="" />
+             </label>
+              
+            </div>
+            
+            {preview? <img src={preview} alt="" className="UserprofileImage" /> :<FaUserCircle className="usericons " /> }
+
+            
             <p className="username_section ">Username</p>
             <p className="username_section emailusernamesection">{username}</p>
           </div>

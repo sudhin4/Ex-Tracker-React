@@ -10,4 +10,5 @@ export const Endpoints = {
     Totalbalance : `${api_base}/TotalBalance`,
     Piechartvalue : `${api_base}/Chartdatasection`,
     Logoutsection : `${api_base}/logoutroute`,
+    Linechartsection : `${api_base}/Linechartsdata`,
 }
