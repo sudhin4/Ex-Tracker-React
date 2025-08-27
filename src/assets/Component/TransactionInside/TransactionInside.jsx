@@ -5,10 +5,17 @@ import { Endpoints } from "../../../Api";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { gettingImage } from "../../../Data/IncExpdata";
+import NewEditbtncomponent from '../NewEditBtn/NewEditbtncomponent'
+import deletefunctionapimodel from "../NewEditBtn/Deletemodelshowingcomponent";
+import Deletefunctionapimodel from "../NewEditBtn/Deletemodelshowingcomponent";
 
 function TransactionInside({ idvaluefunction }) {
+
+  const [isopeneditbtn,setopeneditbtn] = useState(false)
+
+
   const id = idvaluefunction;
-  console.log(idvaluefunction);
+
   const naviagte = useNavigate();
   const api = Endpoints.InsidePage;
   const [isvalue,setvalue] = useState()
@@ -22,7 +29,7 @@ function TransactionInside({ idvaluefunction }) {
     setvalue(response.data.Transaction)
   }
 
-  console.log(isvalue)
+
 
   useEffect(() => {
     gettingvaluefromback();
@@ -35,6 +42,8 @@ function TransactionInside({ idvaluefunction }) {
     
   },[isvalue])
 
+  //delete button and delete functions
+  const [isdeleteopen,setdeleteopen] = useState(false);
 
 
   return (
@@ -83,19 +92,27 @@ function TransactionInside({ idvaluefunction }) {
               Transaction ID
             </h2>
             <h4 className="Transaction_number transactioncontent">
-              67H9&E22960
+              {isvalue?._id}
             </h4>
           </div>
           <div className="Buttons_cancel_delete">
-            <button className="cancelTransaction_btn btn_insideTransaction">
+            <button className="cancelTransaction_btn btn_insideTransaction" onClick={()=>setopeneditbtn(true)}>
               Edit
             </button>
-            <button className="DeleteTransaction_btn btn_insideTransaction">
+            <button className="DeleteTransaction_btn btn_insideTransaction" onClick={()=>setdeleteopen(true)}>
               Delete
             </button>
           </div>
         </div>
       </div>
+
+    {isopeneditbtn?<div className="Editbtn_divvv">
+        <NewEditbtncomponent id={isvalue?._id} isopenorclose={setopeneditbtn}/>
+      </div> :null}
+      {isdeleteopen? <div className="Editbtn_divvv">
+        <Deletefunctionapimodel id={isvalue?._id} isopenfunction={setdeleteopen} />
+      </div>:null}
+      
       <div className="wentwrong_askquestion">
         <h3 className="STWWHeading">Something went wrong?</h3>
         <h4 className="helpingLink" onClick={() => naviagte("/Contactpage")}>

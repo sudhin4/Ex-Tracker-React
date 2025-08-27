@@ -34,7 +34,7 @@ function LoginPage() {
         { Email: userEmail, Password: userPassword },
         { withCredentials: true }
       );
-      console.log(response);
+   
       setstatusscode(response.data.success);
       setapidata(response.data.data);
       
@@ -52,7 +52,7 @@ function LoginPage() {
     }
   }, [statuscode]);
 
-  console.log(statuscode);
+  
 
   return (
     <>

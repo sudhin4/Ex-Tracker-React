@@ -21,7 +21,7 @@ const ContactPage = () => {
     e.preventDefault();
 
     // Simulate sending message
-    console.log('Form submitted:', formData);
+
     setSubmitted(true);
 
     // Reset form

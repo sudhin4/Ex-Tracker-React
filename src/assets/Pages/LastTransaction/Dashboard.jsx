@@ -17,7 +17,7 @@ function Dashboard({ gettingid }) {
     try {
       setloading(true);
       const response = await axios.get(api, { withCredentials: true });
-      console.log(response);
+      
       setdata(response.data.LastTransaction);
     } catch (error) {
       console.log(error);

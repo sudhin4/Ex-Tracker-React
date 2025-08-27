@@ -13,9 +13,7 @@ function IncomeCard() {
   
   const { maindata } = useContext(Maincontextdata);
 
-  useEffect(()=>{
-    console.log(maindata,"Incomecard section")
-  },[]);
+  
 
   const api = Endpoints.Totalbalance;
 

@@ -52,7 +52,7 @@ function App() {
       const response = await axios.get(api, { withCredentials: true });
 
       const loginstatus = response.data.success;
-      console.log(response, "This is from app");
+     
       setusername(response.data.userdata);
       setlogin(loginstatus);
       

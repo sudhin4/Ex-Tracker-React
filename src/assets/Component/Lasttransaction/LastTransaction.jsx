@@ -30,7 +30,7 @@ export function DataInLastTransaction({Name,Image,Date,Category,Amount,id,gettin
     setincexp(false);
   }
   }else{
-    console.log("Not getting value");
+   
   }
   },[])
   

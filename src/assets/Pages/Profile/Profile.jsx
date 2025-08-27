@@ -13,55 +13,61 @@ import { useContext, useEffect, useState } from "react";
 import { Islogin } from "../../../Data/Context";
 import { Endpoints } from "../../../Api";
 import axios from "axios";
-import Addimage from '../Profile/add.png';
+import Addimage from "../Profile/add.png";
 
 function Profilepage() {
-
   const [islogn, setlogin] = useState();
-  const [username,setusername] = useState();
+  const [username, setusername] = useState();
+  const navigate = useNavigate();
   const api = Endpoints.Islogin;
 
   async function checkingLogin() {
     const response = await axios.get(api, {
       withCredentials: true,
     });
-    setlogin(response.data.success)
-    setusername(response.data.userdata)
-    console.log(response,"This is from profile")
-    
-  }
-  console.log(islogn)
-
-  useEffect(() => {checkingLogin()}, []);
-
-  // logoutsection 
-  const logoutapi = Endpoints.Logoutsection;
-
-   async function Logoutfunction(){
-      const response = await axios.get(logoutapi,{withCredentials:true})
-      console.log(response,"Logoutsection")
-      
-    useEffect(()=>{
-
-      },[])
-  }
-
-  const [preview,setpreview] = useState()
-
-  const handlegetimage=(e)=>{
-    const file = e.target.files[0]
-    if(file){
-      setpreview(URL.createObjectURL(file));
-     
-    }
-  }
-
-   console.log(preview,"The image seection")
-
-
+    setlogin(response.data.success);
+    setusername(response.data.userdata);
  
+  }
 
-  
+
+  useEffect(() => {
+    checkingLogin();
+  }, []);
+
+  // logoutsection
+  const logoutapi = Endpoints.Logoutsection;
+  const [logoutbtnopen, setlogoutbtnopen] = useState(false);
+  const [islogoutclick, setlogoutclick] = useState();
+
+
+
+   function Logoutfunction() {
+
+   setlogoutbtnopen(true);
+   
+  }
+
+
+  async function apifunction (){
+
+    const response = await axios.get(logoutapi, { withCredentials: true });
+    
+      setTimeout(() => {
+        navigate("/");
+      }, 1000);
+      
+  }
+
+  const [preview, setpreview] = useState();
+
+  const handlegetimage = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setpreview(URL.createObjectURL(file));
+    }
+  };
+
 
   return (
     <>
@@ -69,16 +75,23 @@ function Profilepage() {
         <div className="Full_Profile_pagee">
           <div className="Username_profile_image ">
             <div>
-              <input type="file" accept="/images*" onChange={handlegetimage} id="inputfilemethod" />
-             <label htmlFor="inputfilemethod">
-              <img src={Addimage} className="addimageforProfile" alt="" />
-             </label>
-              
+              <input
+                type="file"
+                accept="/images*"
+                onChange={handlegetimage}
+                id="inputfilemethod"
+              />
+              <label htmlFor="inputfilemethod">
+                <img src={Addimage} className="addimageforProfile" alt="" />
+              </label>
             </div>
-            
-            {preview? <img src={preview} alt="" className="UserprofileImage" /> :<FaUserCircle className="usericons " /> }
 
-            
+            {preview ? (
+              <img src={preview} alt="" className="UserprofileImage" />
+            ) : (
+              <FaUserCircle className="usericons " />
+            )}
+
             <p className="username_section ">Username</p>
             <p className="username_section emailusernamesection">{username}</p>
           </div>
@@ -113,14 +126,23 @@ function Profilepage() {
 
           <div className="Logoutt_us_section div_for_profilepagee">
             <FiLogOut className="Login_icons iconsforProfilepage " />
-            
-              {islogn ? (
-                <p className="Logoutfunction Para_profile" onClick={()=>Logoutfunction()}>Logout</p>
-              ) : (
-                <p className="Logoutfunction Para_profile">Login</p>
-              )}
-            
+
+            {islogn ? (
+              <p
+                className="Logoutfunction Para_profile"
+                onClick={() => Logoutfunction()}
+              >
+                Logout
+              </p>
+            ) : (
+              <p className="Logoutfunction Para_profile">Login</p>
+            )}
           </div>
+          {logoutbtnopen ? (
+            <div className="logoutbtninprofile">
+              <Logoutbtn isclicking={apifunction} closingbtn={setlogoutbtnopen} />
+            </div>
+          ) : null}
 
           <div className="CopyrightsDivv">
             <MdOutlineCopyright className="CopyRightsActIcons" />
@@ -137,3 +159,29 @@ function Profilepage() {
   );
 }
 export default Profilepage;
+
+export function Logoutbtn({ isclicking,closingbtn }) {
+  return (
+    <>
+      <div className="logoutbuttonsectionndiv">
+        <h2 className="Logoutheadingsection">
+          <b>Are you sure want to Logout.?</b>{" "}
+        </h2>
+        <div className="buttonSectionCancelorlogout">
+          <button
+            className="cancelbtn butonforlogoutbtn"
+            onClick={() => closingbtn(false)}
+          >
+            Cancel
+          </button>
+          <button
+            className="logoutbtn butonforlogoutbtn"
+            onClick={() => isclicking()}
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}

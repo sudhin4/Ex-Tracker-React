@@ -12,7 +12,7 @@ import Newaddbtn_ from './assets/Component/NewAddbtn_design/Newaddtn.jsx'
 import TypelistmapFull from './assets/Component/TypeList/TypelistMapfull.jsx'
 import CategoryDropdown, { CategoryDropdowncontent } from './assets/Component/Categorydropdown/CategoryDropdown.jsx'
 import Navbarbtm from './assets/Component/NavbarBottom/Navbarbtm.jsx'
-import Profilepage from './assets/Pages/Profile/Profile.jsx'
+import Profilepage, { Logoutbtn } from './assets/Pages/Profile/Profile.jsx'
 import UpcomingPayment from './assets/Pages/UpcomingPaymentPages/UpcomingPayment.jsx'
 import UpcomingPaymentPage from './assets/Pages/UpcomingPaymentPages/UpcomingPayment.jsx'
 import UpcomingComponent from './assets/Pages/UpcomingPaymentPages/UpcomingComponent.jsx'
@@ -32,6 +32,7 @@ import FullchartSection from './assets/Component/ChartSection/FullchartSection.j
 import Loadinganimation from './assets/Component/LoadingPage/LodingPage.jsx'
 import SuccessAnimation from './assets/Pages/SuccessAnimation/SuccessAnimation.jsx'
 import Addedsuccess from './assets/Component/successadded/SuccessAdded.jsx'
+import NewEditbtncomponent from './assets/Component/NewEditBtn/NewEditbtncomponent.jsx'
 
 
 

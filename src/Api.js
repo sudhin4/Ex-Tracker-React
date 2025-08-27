@@ -11,4 +11,5 @@ export const Endpoints = {
     Piechartvalue : `${api_base}/Chartdatasection`,
     Logoutsection : `${api_base}/logoutroute`,
     Linechartsection : `${api_base}/Linechartsdata`,
+    updatesection : `${api_base}/:id`,
 }

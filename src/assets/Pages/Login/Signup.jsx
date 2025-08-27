@@ -39,7 +39,7 @@ function Singup() {
         { Email: a, Password: b },
         { withCredentials: true }
       );
-      console.log(response);
+
       setapimessage(response.data.message);
       setsuccessstatus(response.data.success);
     } catch (error) {console.log(error)}

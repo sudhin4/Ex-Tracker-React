@@ -1,45 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
-.Image_for_insideTransaction{
+.Image_for_insideTransaction {
     width: 80px;
     height: 80px;
 }
-.price_for_indeptpage{
+
+.price_for_indeptpage {
     font-family: "Inter";
     font-weight: 600;
     font-size: 30px;
     color: green;
-    
+
 }
-.TransactionInside_divv{
+
+.TransactionInside_divv {
     display: flex;
     flex-direction: column;
-    
+
 }
-.Image_price_tagsection{
+
+.Image_price_tagsection {
     display: flex;
     flex-direction: column;
     line-height: 0.1px;
 }
-.transactionHeaidngss{
+
+.transactionHeaidngss {
     font-family: 'Inter';
     font-weight: 500;
     font-size: 15px;
 }
-.transactioncontent{
+
+.transactioncontent {
     font-family: "Inter";
     font-weight: 600;
     font-size: 15px;
     position: absolute;
     right: 20px;
 }
-.inside_div2323{
+
+.inside_div2323 {
     display: flex;
     flex-direction: row;
-    align-items: center;   
+    align-items: center;
 }
-.transaction_name_content{
+
+.transaction_name_content {
     width: max-content;
     line-height: 1;
     position: absolute;
@@ -47,7 +54,7 @@
 
 }
 
-.OtherInformationdivv{
+.OtherInformationdivv {
     display: flex;
     flex-direction: column;
     line-height: 0.2;
@@ -58,10 +65,12 @@
     border-radius: 10px;
     margin: 5px;
 }
-.status__code{
+
+.status__code {
     color: green;
 }
-.btn_insideTransaction{
+
+.btn_insideTransaction {
     width: 90px;
     height: 35px;
     padding: 5px;
@@ -72,22 +81,26 @@
     border: none;
     border-radius: 5px;
 }
-.DeleteTransaction_btn{
+
+.DeleteTransaction_btn {
     color: white;
     background-color: rgb(240, 66, 66);
 }
-.cancelTransaction_btn{
+
+.cancelTransaction_btn {
     color: black;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.231);
 }
-.Image_price_tagsection{
+
+.Image_price_tagsection {
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.Buttons_cancel_delete{
+
+.Buttons_cancel_delete {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -95,12 +108,14 @@
     justify-content: center;
     margin-top: 25px;
 }
-.Notess{
+
+.Notess {
     font-family: 'Inter';
     font-weight: 500;
     font-family: 19px;
 }
-.wentwrong_askquestion{
+
+.wentwrong_askquestion {
     display: flex;
     flex-direction: column;
     line-height: 0.1;
@@ -108,13 +123,15 @@
     align-items: center;
     margin: 20px;
 }
-.STWWHeading{
+
+.STWWHeading {
     font-family: 'Sans-serif';
     font-weight: 400;
     font-size: 15px;
 
 }
-.helpingLink{
+
+.helpingLink {
     font-family: 'Sans-serif';
     font-weight: 600;
     font-size: 14px;
@@ -122,4 +139,14 @@
     text-decoration: underline;
     position: relative;
     bottom: 10px;
+}
+
+.Editbtn_divvv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.477);
+    z-index: 100;
 }

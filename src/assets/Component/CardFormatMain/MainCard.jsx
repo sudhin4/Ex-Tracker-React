@@ -10,14 +10,14 @@ function MainCard() {
 
 
   const { Username,gettotal } = useContext(Islogin);
-  console.log(Username)
+ 
   const [istotalamount,settotalamount] = useState();
 
   const api = Endpoints.Totalbalance;
 
   async function gettotalbalance(){
     const response = await axios.get(api,{withCredentials:true});
-    console.log(response,"The totalbalance");
+    
     settotalamount(response.data.TotalMoney)
     gettotal(response.data.TotalMoney);
   }
