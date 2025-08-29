@@ -40,6 +40,9 @@
   }
   .pie-title {
     font-size: 1.2rem;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
   }
   .pie-container {
     height: 380px; /* slightly smaller chart on mobile */

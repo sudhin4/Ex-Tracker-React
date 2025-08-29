@@ -24,7 +24,7 @@ export default function ExpensePieChart({
 
   return (
     <div className="pie-card">
-      <h2 className="pie-title">This Month Transactions</h2>
+      <h2 className="pie-title">Last Transactions Chart </h2>
       <div className="pie-container">
         <ResponsivePie
           data={data}

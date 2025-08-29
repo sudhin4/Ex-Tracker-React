@@ -33,12 +33,12 @@ import Loadinganimation from './assets/Component/LoadingPage/LodingPage.jsx'
 import SuccessAnimation from './assets/Pages/SuccessAnimation/SuccessAnimation.jsx'
 import Addedsuccess from './assets/Component/successadded/SuccessAdded.jsx'
 import NewEditbtncomponent from './assets/Component/NewEditBtn/NewEditbtncomponent.jsx'
-
+import DesktopFrontPage from './assets/Pages/DesktopFrontPage/DesktopFrontPage.jsx'
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App/>
+    <DesktopFrontPage/>
   </StrictMode>,
 )

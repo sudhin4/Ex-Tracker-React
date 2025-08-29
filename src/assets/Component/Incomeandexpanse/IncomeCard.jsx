@@ -36,7 +36,7 @@ function IncomeCard() {
           <h4 className="Income_heading_section Income_headdd">Income</h4>
           <div className="calender_imagediv">
             <FaCalendar className="calenderIMage_section" />
-            <h4 className="Todayexpanse_heading Income">This Month</h4>
+            <h4 className="Todayexpanse_heading Income">This Year</h4>
           </div>
           
         </div>
@@ -68,7 +68,7 @@ const  {  getexpansetotal } = useContext(Islogin)
           <h4 className="Income_heading_section">Expanse</h4>
           <div className="calender_imagediv">
             <FaCalendar  className="calenderIMage_section" />
-            <h4 className="Todayexpanse_heading Income">This Month</h4>
+            <h4 className="Todayexpanse_heading Income">This Year</h4>
           </div>
         </div>
       </div>

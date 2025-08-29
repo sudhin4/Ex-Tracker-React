@@ -36,7 +36,7 @@
     gap: 8px;
 }
 .Data_forAMOUNTExpanse{
-    color: rgba(234, 62, 65, 1);
+    color: rgb(233, 20, 23);
     position: relative;
 }
 .Data_forDATE{
@@ -72,7 +72,7 @@
        
     }
     .Data_FOR_TRANSACTIONnAME{
-        color: rgba(0, 0, 0, 0.708);
+        color: rgba(0, 0, 0, 0.92);
         width: 90px;
         line-height: 15px;
         font-size: 16px;
@@ -110,10 +110,10 @@
         left: 75px;
     }
     .Data_forAMOUNTExpanse{
-        color: rgba(255, 0, 0, 0.568);
+        color: rgba(231, 12, 12, 0.929);
     }
     .Data_forAMOUNTIncome{
-        color: rgba(3, 116, 27, 0.568);
+        color: rgba(6, 114, 30, 0.845);
     }
     .delete_icons_lasttransaction{
         color: rgba(255, 0, 0, 0.411);

@@ -6,6 +6,7 @@ import { Endpoints } from "../../../Api";
 import axios from "axios";
 import LoginDirectComponent from "../../Pages/LoginDirectPage/LoginDirectComponent";
 import Loadinganimation from "../LoadingPage/LodingPage";
+import NotfoundPage from "../RedirectPage/NotfounPage";
 
 function FullchartSection() {
   const [isclick, setclick] = useState("I");
@@ -13,6 +14,7 @@ function FullchartSection() {
   const [isexpansevalue, setexpansevalue] = useState([]);
   const [issuccess, setsuccess] = useState();
   const [Loading, setloading] = useState(true);
+  const [isdata,setdata] = useState(false);
 
   const api = Endpoints.Piechartvalue;
 
@@ -20,9 +22,12 @@ function FullchartSection() {
     try {
       setloading(true);
       const response = await axios.get(api, { withCredentials: true });
+      
       setsuccess(response.data.success);
       setincomevalue(response.data.Incomepiechartvalue);
       setexpansevalue(response.data.Expnasepiechartvalue);
+     
+      
     } catch (error) {
       console.log(error);
     } finally {
@@ -36,13 +41,31 @@ function FullchartSection() {
     gettingvaluefromapi();
   }, []);
 
+console.log(isincomevalue)
+ useEffect(() => {
+  if ((isincomevalue && isincomevalue.length > 0) || 
+      (isexpansevalue && isexpansevalue.length > 0)) {
+    setdata(true);
+  } else {
+    setdata(false);
+  }
+}, [isincomevalue,isexpansevalue]);
+
+console.log(isdata)
+
+  
+
+
+
   return (
     <div>
       {Loading ? (
         <Loadinganimation />
-      ) : (
+      ) :
+      
+      (
         <div>
-          {issuccess ? (
+          {isdata ? (issuccess ? (
             <>
               <div className="Incomeandexpansebuttondiv">
                 <button
@@ -79,7 +102,9 @@ function FullchartSection() {
             <div>
               <LoginDirectComponent />
             </div>
-          )}{" "}
+          )) : <NotfoundPage/>}
+          
+          {" "}
         </div>
       )}
     </div>

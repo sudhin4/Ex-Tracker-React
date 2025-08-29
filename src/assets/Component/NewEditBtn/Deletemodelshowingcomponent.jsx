@@ -1,33 +1,35 @@
 import axios from "axios";
 import { Endpoints } from "../../../Api";
 import { useNavigate } from "react-router-dom";
+import "./NewEditbtncomponentn.css";
 
-function Deletefunctionapimodel ({id,isopenfunction}){
-    const naviagate = useNavigate()
+function Deletefunctionapimodel({ id, isopenfunction }) {
+  const naviagate = useNavigate();
 
-    const Apideletefunction = `http://localhost:3000/api/v1/DeleteTransaction/${id}`
+  const Apideletefunction = `http://192.168.91.226:3000/api/v1/DeleteTransaction/${id}`;
 
-   async function apifunction(){
-        const response = await axios.post(Apideletefunction,{id},{withCredentials:true});
-        setTimeout(() => {
-            naviagate('/$Transaction&History@')
-        }, 1000);
-    }
+  async function apifunction() {
+    const response = await axios.post(
+      Apideletefunction,
+      { id },
+      { withCredentials: true }
+    );
+    console.log(response)
+    naviagate("/$Transaction&History@");
+  }
 
-
-    return(
-        <>
+  return (
+    <>
       <div>
-        <div className="fulleditbtncomponentndivv">
+        <div className="fulleditbtncomponentndivv  ">
           <h2 className="editOptionheading">
-            <b>Are you sure want to Delete</b>
+            <b>Are you sure?</b>
           </h2>
-          
-          
+
           <div className="EditbtnanccancelbtnDiv">
             <button
               className="CancelBtn Editbuttonfullbtn"
-             onClick={()=>isopenfunction(false)}
+              onClick={() => isopenfunction(false)}
             >
               Cancel
             </button>
@@ -41,6 +43,6 @@ function Deletefunctionapimodel ({id,isopenfunction}){
         </div>
       </div>
     </>
-    )
+  );
 }
 export default Deletefunctionapimodel;

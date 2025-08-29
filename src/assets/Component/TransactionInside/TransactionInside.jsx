@@ -109,7 +109,7 @@ function TransactionInside({ idvaluefunction }) {
     {isopeneditbtn?<div className="Editbtn_divvv">
         <NewEditbtncomponent id={isvalue?._id} isopenorclose={setopeneditbtn}/>
       </div> :null}
-      {isdeleteopen? <div className="Editbtn_divvv">
+      {isdeleteopen? <div className="Editbtn_divvv deletecomponentdivv">
         <Deletefunctionapimodel id={isvalue?._id} isopenfunction={setdeleteopen} />
       </div>:null}
       

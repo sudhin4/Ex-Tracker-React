@@ -69,8 +69,8 @@
         align-items: center;
         gap: 4px;
         position: relative;
-        left: 100px;
-        bottom: 10px;
+        left: 70px;
+        bottom: -30px;
     }
 
     .Right_arrow_btn {
@@ -154,7 +154,7 @@
         background-color: white;
         position: relative;
         top: 220px;
-        left: 50px;
+        left: 18px;
     }
     .logoutbtninprofile{
         position: fixed;

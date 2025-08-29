@@ -1,0 +1,158 @@
+.MainHeadingFrontPagee {
+    font-family: "Berlin Sans FB";
+    font-weight: 450;
+    font-size: 30px;
+}
+
+.ExTrackerLogoheading {
+    font-family: "Berlin Sans FB";
+    font-weight: 450;
+    font-size: 40px;
+}
+
+.frontpageHeadingParagraph {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    width: 80%;
+    position: relative;
+    bottom: 40px;
+
+    text-align: center;
+
+}
+
+.DownloadBtnTag {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.5s;
+    position: relative;
+    bottom: 40px;
+}
+
+.DownloadBtnTag:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.FrontPageImageTag {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    bottom: 50px;
+}
+
+.ParagraphFrontPagedivv {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+}
+
+.importNoticeFont {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    bottom: 30px;
+}
+
+.dwnloadbtndiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 75px;
+}
+
+.LogoExTrackerDiv {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.Imagesectionfrontpage {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 30px;
+}
+
+@media only screen and (max-width:453px) {
+    .ExTrackerLogoheading {
+        font-size: 30px;
+        position: relative;
+        right: 20px;
+    }
+
+    .MainHeadingFrontPagee {
+        font-size: 25px;
+        font-family: "Poppins";
+        font-weight: 600;
+        position: relative;
+        top: 30px;
+
+    }
+
+    .frontpageHeadingParagraph {
+        font-size: 15px;
+        width: 90%;
+        position: relative;
+        top: 10px;
+    }
+
+    .dwnloadbtndiv {
+        position: relative;
+        top: -20px;
+    }
+
+    .Imagesectionfrontpage {
+        position: relative;
+        top: 40px;
+
+    }
+
+    .FrontPageImageTag {
+        width: 300px;
+        height: 250px;
+    }
+
+    .emailsection_frontPage {
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 15px;
+        color: black;
+
+    }
+
+    a {
+        color: black;
+    }
+
+    .emailIconfrontPage {
+        font-size: 20px;
+    }
+
+    .contactdectionnn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        position: absolute;
+        bottom: 5%;
+        left: 35%;
+    }
+
+}

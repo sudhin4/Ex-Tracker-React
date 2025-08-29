@@ -4,14 +4,16 @@ import Filters from "../LastTransaction/settings-sliders.png";
 import axios from "axios";
 import { Endpoints } from "../../../Api";
 import { gettingImage } from "../../../Data/IncExpdata";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import NotfoundPage from "../../Component/RedirectPage/NotfounPage";
 import Loadinganimation from "../../Component/LoadingPage/LodingPage";
+import { Islogin } from "../../../Data/Context";
 
 function Dashboard({ gettingid }) {
   const [data, setdata] = useState([]);
   const [loading, setloading] = useState(true);
   const api = Endpoints.LastTransaction;
+  const { Loginstatus } = useContext(Islogin);
 
   async function apifunction() {
     try {
@@ -32,6 +34,16 @@ function Dashboard({ gettingid }) {
   useEffect(() => {
     apifunction();
   }, []);
+  const [isvalue,setvalue] = useState(false)
+
+  useEffect(()=>{
+    if(data && data.length>0){
+      setvalue(true);
+    }
+    else{
+      setvalue(false)
+    }
+  })
 
   return (
     <>
@@ -39,7 +51,7 @@ function Dashboard({ gettingid }) {
         <Loadinganimation />
       ) : (
         <div>
-          {data? (
+          {Loginstatus ? ( isvalue ? (
             <div className="lastTransaction_page_section">
               {data.map((item, index) => (
                 <div key={index}>
@@ -62,7 +74,10 @@ function Dashboard({ gettingid }) {
             <div className="NotfoundPageIndashboard">
               <NotfoundPage />
             </div>
-          )}
+          )) :<div className="NotfoundPageIndashboard">
+              <NotfoundPage />
+            </div> }
+          
         </div>
       )}
     </>

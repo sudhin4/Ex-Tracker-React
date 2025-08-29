@@ -186,7 +186,7 @@ export const gettingImage = {
     Gym:Gym,
     Medical:Medical,
     Insurance:Insurance,
-    Maintaince:Maintaince,
+    Maintanence:Maintaince,
     PublicTransport:Publictransport,
     Rent:Rent,
     Subscription:Subscription,

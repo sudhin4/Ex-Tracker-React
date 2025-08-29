@@ -44,10 +44,10 @@ export default function ExpenseBarChart({ isincomeorexpanse }) {
 
         {ischartvalue ? (
           <ResponsiveBar
-            data={isdaily ? ischartvalue.slice(-6) : ischartdatevalue.slice(-5)}
+            data={isdaily ? ischartvalue.slice(-6) : ischartdatevalue.slice(-6)}
             keys={["Income", "Expenses"]}
             indexBy="month"
-            margin={{ top: 50, right: 10, bottom: 60, left: 40 }}
+            margin={{ top: 50, right: 10, bottom: 60, left: 60 }}
             padding={0.4}
             borderRadius={0.9}
             valueScale={{ type: "linear" }}

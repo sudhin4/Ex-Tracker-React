@@ -11,7 +11,7 @@ function NewEditbtncomponent({ id, isopenorclose }) {
   const navigate = useNavigate();
   const idvalue = id
 
-  const Api = `http://localhost:3000/api/v1/${idvalue}`
+  const Api = `http://192.168.91.226:3000/api/v1/${idvalue}`
   
 
   async function updatevalue() {

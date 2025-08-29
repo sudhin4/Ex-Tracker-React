@@ -54,19 +54,19 @@
     font-weight: 500;
     font-size: 19px;
     position: relative;
-    left: 20%;
+    left: 3%;
 }
 .dailybased{
   font-family: 'Inter';
   font-weight: 600;
-  font-size: 17px;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.203);
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.13);
   border-radius: 5px;
   color: black;
   background-color: white;
   position: relative;
     bottom: 420px;
-    left: 310px;
-  width: 90px;
+    left: 250px;
+  width: 80px;
 }
