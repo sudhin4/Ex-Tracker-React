@@ -6,7 +6,7 @@ import "./NewEditbtncomponentn.css";
 function Deletefunctionapimodel({ id, isopenfunction }) {
   const naviagate = useNavigate();
 
-  const Apideletefunction = `http://192.168.91.226:3000/api/v1/DeleteTransaction/${id}`;
+  const Apideletefunction = `https://expansetrackerapi.vercel.app/api/v1/DeleteTransaction/${id}`;
 
   async function apifunction() {
     const response = await axios.post(

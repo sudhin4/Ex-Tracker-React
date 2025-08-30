@@ -39,6 +39,6 @@ import DesktopFrontPage from './assets/Pages/DesktopFrontPage/DesktopFrontPage.j
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <DesktopFrontPage/>
+    <App/>
   </StrictMode>,
 )

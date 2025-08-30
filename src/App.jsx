@@ -48,10 +48,12 @@ function App() {
 
   async function checkingfunction() {
     try {
+      
       setloading(true);
       const response = await axios.get(api, { withCredentials: true });
-
+      
       const loginstatus = response.data.success;
+    
      
       setusername(response.data.userdata);
       setlogin(loginstatus);

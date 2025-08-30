@@ -1,4 +1,4 @@
-const api_base = "http://192.168.91.226:3000/api/v1"; // "http://localhost:3000/api/v1" is when using in laptop or samedevice
+const api_base = "https://expansetrackerapi.vercel.app/api/v1"; // "http://localhost:3000/api/v1" is when using in laptop or samedevice
 
 export const Endpoints = {
     signup : `${api_base}/Singupnewuser`,
