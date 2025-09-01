@@ -1,5 +1,5 @@
 import React from "react";
-import Lottie from "lottie-web/build/player/lottie_light.min.js";
+import Lottie from "lottie-react";
 import Erroranimationgif from '../../../Data/FailError.json';
 
 function Erroranimation(){
