@@ -1,4 +1,4 @@
-import Lottie from "lottie-react";
+import Lottie from "lottie-web/build/player/lottie_light.min.js";
 import React from "react";
 import SuccessAnimtaionadded from '../../../Data/addedsuccess.json'
 import './SuccessAdded.css'
