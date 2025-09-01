@@ -11,12 +11,12 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg','dollar.png'], 
       manifest: {
-        name: 'NextDevPath',
-        short_name: 'NextDev',
+        name: 'Ex-Tracker',
+        short_name: 'Ex-Tracker',
         start_url: '/',
         display: 'standalone',
         background_color: '#000000',
-        theme_color: '#1d4ed8',
+        theme_color: '#000000ff',
         icons: [
           { src: 'dollar.png', sizes: '192x192', type: 'image/png' },
           { src: 'dollar.png', sizes: '512x512', type: 'image/png' },
