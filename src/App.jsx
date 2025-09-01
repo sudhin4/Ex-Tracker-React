@@ -30,6 +30,7 @@ import Loadinganimation from "./assets/Component/LoadingPage/LodingPage";
 import SuccessAnimation from "./assets/Pages/SuccessAnimation/SuccessAnimation";
 import Erroranimation from "./assets/Component/ErrorAnimation/ErrorAnimationcomp";
 import { IoEllipseSharp } from "react-icons/io5";
+import DesktopFrontPage from "./assets/Pages/DesktopFrontPage/DesktopFrontPage";
 
 import Addedsuccess from "../src/assets/Component/successadded/SuccessAdded";
 
@@ -94,12 +95,38 @@ function App() {
   const [isincomevalue, setincomevalue] = useState();
   const [isexpansevalue, setexpansevalue] = useState();
 
+
+  // is pwa section
+
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [isshowInstallBtn, setShowInstallBtn] = useState(false);
+  useEffect(() => {
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();  
+      setDeferredPrompt(e); 
+      setShowInstallBtn(true); 
+    });
+  }, []);
+  function handleInstallClick () {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('App installed');
+        } else {
+          console.log('App installation rejected');
+             }
+        setDeferredPrompt(null);
+        setShowInstallBtn(false);
+      });
+    }
+  };
+
   return (
     <>
     {iserror ?<Erroranimation/> : <>{loading ? (
         <Loadinganimation />
-      ) : (
-        <Islogin.Provider
+      ) : ( !isshowInstallBtn ? <DesktopFrontPage installbtn={handleInstallClick} />:<Islogin.Provider
           value={{
             Loginstatus: islogin,
             Username: isusername,
@@ -182,8 +209,9 @@ function App() {
               </div>
             </Router>
           </Maincontextdata>
-        </Islogin.Provider>
-      )}</>}
+        </Islogin.Provider> )
+        
+      }</>}
       
     </>
   );

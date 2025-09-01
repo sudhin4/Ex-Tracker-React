@@ -2,7 +2,7 @@ import FrontpageImage from "../DesktopFrontPage/FrontpageImage.png";
 import "./DesktopFrontPage.css";
 import { MdEmail } from "react-icons/md";
 
-function DesktopFrontPage() {
+function DesktopFrontPage({installbtn}) {
   return (
     <>
       <div className="fullFrontPagedesktopSection">
@@ -22,7 +22,7 @@ function DesktopFrontPage() {
             <h5 className="importNoticeFont">
               <b>"Only Mobile Use"</b>
             </h5>
-            <button className="DownloadBtnTag">Download</button>
+            <button className="DownloadBtnTag" onClick={()=>installbtn}>Download</button>
           </div>
           <div className="Imagesectionfrontpage">
             <img src={FrontpageImage} className="FrontPageImageTag" alt="" />
