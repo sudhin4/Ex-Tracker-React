@@ -22,7 +22,7 @@ function DesktopFrontPage({installbtn}) {
             <h5 className="importNoticeFont">
               <b>"Only Mobile Use"</b>
             </h5>
-            <button className="DownloadBtnTag" onClick={()=>installbtn}>Download</button>
+            <button className="DownloadBtnTag" onClick={installbtn}>Download</button>
           </div>
           <div className="Imagesectionfrontpage">
             <img src={FrontpageImage} className="FrontPageImageTag" alt="" />
