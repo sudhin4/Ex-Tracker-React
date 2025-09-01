@@ -126,7 +126,7 @@ function App() {
     <>
     {iserror ?<Erroranimation/> : <>{loading ? (
         <Loadinganimation />
-      ) : ( !isshowInstallBtn ? <DesktopFrontPage installbtn={handleInstallClick} />:<Islogin.Provider
+      ) : ( isshowInstallBtn ? <DesktopFrontPage installbtn={handleInstallClick} />:<Islogin.Provider
           value={{
             Loginstatus: islogin,
             Username: isusername,
