@@ -9,7 +9,7 @@ export default defineConfig({
 
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg'], 
+      includeAssets: ['favicon.svg','dollar.png'], 
       manifest: {
         name: 'NextDevPath',
         short_name: 'NextDev',
@@ -18,8 +18,8 @@ export default defineConfig({
         background_color: '#000000',
         theme_color: '#1d4ed8',
         icons: [
-          { src: '/dollar.png', sizes: '192x192', type: 'image/png' },
-          { src: '/dollar.png', sizes: '512x512', type: 'image/png' },
+          { src: 'dollar.png', sizes: '192x192', type: 'image/png' },
+          { src: 'dollar.png', sizes: '512x512', type: 'image/png' },
         ],
       },
       workbox: {
