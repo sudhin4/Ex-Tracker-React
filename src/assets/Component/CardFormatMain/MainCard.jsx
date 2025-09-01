@@ -1,6 +1,6 @@
 import { BsThreeDots } from "react-icons/bs";
 import { IoWifi } from "react-icons/io5";
-import "../CardFormatMain/MainCard.css";
+import "./MainCard.css";
 import { useContext, useEffect, useState } from "react";
 import { Islogin } from "../../../Data/Context";
 import { Endpoints } from "../../../Api";
